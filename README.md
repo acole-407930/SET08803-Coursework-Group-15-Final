@@ -73,11 +73,12 @@ Code Review 1 Contribution	Detail
 
 * Master Build Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15/main.yml?branch=master)
 
-* Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15/main.yml?branch=master)
+* Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15/main.yml?branch=master) 
 
 * License [![LICENSE](https://img.shields.io/github/license/acole-407930/SET08803-Coursework-Group-15.svg?style=flat-square)](https://github.com/acole-407930/SET08803-Coursework-Group-15/blob/master/LICENSE)
 
 * Release [![Releases](https://img.shields.io/github/release/acole-407930/SET08803-Coursework-Group-15/all.svg?style=flat-square)](https://github.com/acole-407930/SET08803-Coursework-Group-15/releases)
+
   Zube | Agile project management with a seamless GitHub integration
   Zube lets the product team work alongside the developers. The GitHub integration always keeps developer issues up to date.
  
