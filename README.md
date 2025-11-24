@@ -71,13 +71,13 @@ Code Review 1 Contribution	Detail
 40733245 - Zoe Villanueva        	Set up and maintained the Project Board, Kanban, ReadMe, and Sprint Board based on finalized use cases and user stories. Delivered all components on time and kept communication open for revisions and updates. Demonstrated strong organization and reliability.
 
 
-* Master Build Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15/main.yml?branch=master)
+* Master Build ![Master Build](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15-Final/main.yml?branch=master&label=Master%20Build)
 
-* Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15/main.yml?branch=master) 
+* Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15-Final/main.yml?branch=master)
 
 * License [![LICENSE](https://img.shields.io/github/license/acole-407930/SET08803-Coursework-Group-15.svg?style=flat-square)](https://github.com/acole-407930/SET08803-Coursework-Group-15/blob/master/LICENSE)
 
-* Release [![Releases](https://img.shields.io/github/release/acole-407930/SET08803-Coursework-Group-15/all.svg?style=flat-square)](https://github.com/acole-407930/SET08803-Coursework-Group-15/releases)
+* Release [![Release](https://img.shields.io/github/release/acole-407930/SET08803-Coursework-Group-15-Final/all.svg?style=flat-square&label=Release)](https://github.com/acole-407930/SET08803-Coursework-Group-15-Final/releases)
 
   Zube | Agile project management with a seamless GitHub integration
   Zube lets the product team work alongside the developers. The GitHub integration always keeps developer issues up to date.
