@@ -13,8 +13,8 @@ This document outlines the branch protection rules enforced in this repository t
    - All changes must be submitted via a Pull Request (PR).
 
 2. __Required Reviews__
-   At least 1–2 code reviews are required before merging.
-   Reviewers must be different from the author of the PR.
+   - At least 1–2 code reviews are required before merging.
+   - Reviewers must be different from the author of the PR.
 
 3. __Status Checks__
    - All required CI/CD checks must pass before merging:
