@@ -1,4 +1,4 @@
-# Code of Conduct
+# Code of Conduct (Group 15)
 
 This document outlines the Code of Conduct for our Scrum Team as part of the DevOps coursework (Group 15).
 
