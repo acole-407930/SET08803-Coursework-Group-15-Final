@@ -81,7 +81,23 @@ public class App
             Statement stmt = con.createStatement();
 
             // Query
-            String strSelect = "SELECT Name, Population FROM country ORDER BY Population DESC";
+            String strSelect =
+                    "SELECT " +
+                            "co.Code, " +
+                            "co.Name AS CountryName, " +
+                            "co.Continent, " +
+                            "co.Region, " +
+                            "co.Population, " +
+                            "ci.Name AS CapitalName " +
+                            "FROM " +
+                            "country co " +
+                            "LEFT JOIN " +
+                            "city ci " +
+                            "ON " +
+                            "co.Capital = ci.ID " +
+                            "ORDER BY " +
+                            "co.Population DESC, " +
+                            "CountryName ASC";
 
             // Execute SQL statement
             ResultSet rset = stmt.executeQuery(strSelect);
@@ -89,15 +105,27 @@ public class App
             // Iterate through all rows
             while (rset.next()) {
                 Country cnty = new Country();
-                cnty.setName(rset.getString("Name"));
+                cnty.setCode(rset.getString("Code"));
+                cnty.setName(rset.getString("CountryName"));
+                cnty.setContinent(rset.getString("Continent"));
+                cnty.setRegion(rset.getString("Region"));
                 cnty.setPopulation(rset.getInt("Population"));
+                cnty.setCapitalName(rset.getString("CapitalName"));
                 countries.add(cnty);
             }
 
             // Display results
             System.out.println("Countries from largest to smallest in population:");
             for (Country country : countries) {
-                System.out.printf("%s: %,d%n", country.getName(), country.getPopulation());
+                System.out.printf(
+                        "Code: %s | Name: %s | Continent: %s | Region: %s | Population: %,d | Capital: %s%n",
+                        country.getCode(),
+                        country.getName(),
+                        country.getContinent(),
+                        country.getRegion(),
+                        country.getPopulation(),
+                        country.getCapitalName()
+                );
             }
 
         } catch (Exception e) {
