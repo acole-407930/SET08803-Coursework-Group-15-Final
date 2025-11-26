@@ -97,7 +97,8 @@ public class App
                                 "WHERE " +
                                     "co.Continent ='" + continent + "' " +
                                 " Order By " +
-                                    "Population Desc;";
+                                    "Population Desc;" +
+                                    "CountryName ASC";
 
             ResultSet rset = stmt.executeQuery(strSelect);
 
