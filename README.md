@@ -75,7 +75,7 @@ Code Review 1 Contribution	Detail
 
 * Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15-Final/main.yml?branch=master)
 
-* License [![LICENSE](https://img.shields.io/github/license/acole-407930/SET08803-Coursework-Group-15.svg?style=flat-square)](https://github.com/acole-407930/SET08803-Coursework-Group-15/blob/master/LICENSE)
+* License [![LICENSE](https://img.shields.io/github/license/acole-407930/SET08803-Coursework-Group-15-Final.svg?style=flat-square)](https://github.com/acole-407930/SET08803-Coursework-Group-15/blob/master/LICENSE)
 
 * Release [![Release](https://img.shields.io/github/release/acole-407930/SET08803-Coursework-Group-15-Final/all.svg?style=flat-square&label=Release)](https://github.com/acole-407930/SET08803-Coursework-Group-15-Final/releases)
 
