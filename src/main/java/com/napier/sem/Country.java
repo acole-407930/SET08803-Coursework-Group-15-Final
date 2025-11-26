@@ -16,6 +16,7 @@ public class Country {
     private String governmentForm;
     private String headOfState;
     private Integer capital;         // Nullable, so use Integer
+    private String capitalName;
     private String code2;
 
     // --- Constructors ---
@@ -26,7 +27,7 @@ public class Country {
                    double surfaceArea, Integer indepYear, int population,
                    Double lifeExpectancy, Double gnp, Double gnpOld,
                    String localName, String governmentForm, String headOfState,
-                   Integer capital, String code2) {
+                   Integer capital, String capitalName, String code2) {
         this.code = code;
         this.name = name;
         this.continent = continent;
@@ -41,6 +42,7 @@ public class Country {
         this.governmentForm = governmentForm;
         this.headOfState = headOfState;
         this.capital = capital;
+        this.capitalName = capitalName;
         this.code2 = code2;
     }
 
@@ -87,6 +89,9 @@ public class Country {
     public Integer getCapital() { return capital; }
     public void setCapital(Integer capital) { this.capital = capital; }
 
+    public String getCapitalName() {return capitalName; }
+    public void setCapitalName(String capitalName){ this.capitalName = capitalName; }
+
     public String getCode2() { return code2; }
     public void setCode2(String code2) { this.code2 = code2; }
 
@@ -107,7 +112,8 @@ public class Country {
                 ", localName='" + localName + '\'' +
                 ", governmentForm='" + governmentForm + '\'' +
                 ", headOfState='" + headOfState + '\'' +
-                ", capital=" + capital +
+                ", capital=" + capital + '\'' +
+                ", capitalName=" + capitalName + '\'' +
                 ", code2='" + code2 + '\'' +
                 '}';
     }
