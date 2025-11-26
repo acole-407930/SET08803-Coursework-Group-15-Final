@@ -1,6 +1,9 @@
 package com.napier.sem;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class App
 {
@@ -69,6 +72,40 @@ public class App
         }
     }
 
+    public void displayCountriesFromLargestToSmallestInPopulation() {
+        try {
+            // List of country objects
+            List<Country> countries = new ArrayList<>();
+
+            // Create an SQL statement
+            Statement stmt = con.createStatement();
+
+            // Query
+            String strSelect = "SELECT Name, Population FROM country ORDER BY Population DESC";
+
+            // Execute SQL statement
+            ResultSet rset = stmt.executeQuery(strSelect);
+
+            // Iterate through all rows
+            while (rset.next()) {
+                Country cnty = new Country();
+                cnty.setName(rset.getString("Name"));
+                cnty.setPopulation(rset.getInt("Population"));
+                countries.add(cnty);
+            }
+
+            // Display results
+            System.out.println("Countries from largest to smallest in population:");
+            for (Country country : countries) {
+                System.out.printf("%s: %,d%n", country.getName(), country.getPopulation());
+            }
+
+        } catch (Exception e) {
+            System.out.println("Error: " + e.getMessage());
+            System.out.println("Failed to get countries information");
+        }
+    }
+
     public static void main(String[] args)
     {
         // Create new Application
@@ -76,6 +113,8 @@ public class App
 
         // Connect to database
         a.connect();
+
+        a.displayCountriesFromLargestToSmallestInPopulation();
 
         // Disconnect from database
         a.disconnect();
