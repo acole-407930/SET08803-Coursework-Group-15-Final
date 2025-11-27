@@ -29,10 +29,19 @@ public class CountryRepoImp implements CountryRepo{
         return executeQuery(sql, continent);
     }
 
-    private List<Country> executeQuery(String sql, String continent) {
+    @Override
+    public List<Country> getAllCountriesPopulationFromLargestToSmallestByRegion(String region){
+        String sql = "SELECT co.Code, co.Name AS CountryName, co.Continent, co.Region, co.Population, ci.Name AS CapitalName " +
+                "FROM country co LEFT JOIN city ci ON co.Capital = ci.ID " +
+                "WHERE co.Region = ? " +
+                "ORDER BY co.Population DESC, CountryName ASC";
+        return executeQuery(sql, region);
+    }
+
+    private List<Country> executeQuery(String sql, String field) {
         List<Country> countries = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
-            if (continent != null) pstmt.setString(1, continent);
+            if (field != null) pstmt.setString(1, field);
             ResultSet rset = pstmt.executeQuery();
             while (rset.next()) {
                 Country cnty = new Country();
