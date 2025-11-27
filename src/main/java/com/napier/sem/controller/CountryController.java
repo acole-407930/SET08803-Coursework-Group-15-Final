@@ -16,4 +16,6 @@ public class CountryController {
     }
 
     public List<Country> getCountriesFromContinent(String continent) {return countryRepo.getAllCountriesInContinentOrderByPopulationDesc(continent); }
+
+    public List<Country> getCountriesFromRegion(String region) {return countryRepo.getAllCountriesPopulationFromLargestToSmallestByRegion(region); }
 }
