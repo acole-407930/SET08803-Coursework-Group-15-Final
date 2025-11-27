@@ -20,6 +20,15 @@ public class CountryRepoImp implements CountryRepo{
         return executeQuery(sql, null);
     }
 
+    @Override
+    public List<Country> getAllCountriesInContinentOrderByPopulationDesc(String continent){
+        String sql = "SELECT co.Code, co.Name AS CountryName, co.Continent, co.Region, co.Population, ci.Name AS CapitalName " +
+                "FROM country co LEFT JOIN city ci ON co.Capital = ci.ID " +
+                "WHERE co.Continent = ? " +
+                "ORDER BY co.Population DESC, CountryName ASC";
+        return executeQuery(sql, continent);
+    }
+
     private List<Country> executeQuery(String sql, String continent) {
         List<Country> countries = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
