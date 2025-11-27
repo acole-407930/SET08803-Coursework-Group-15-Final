@@ -38,10 +38,45 @@ public class CountryRepoImp implements CountryRepo{
         return executeQuery(sql, region);
     }
 
+    public List<Country> getTopNMostPopulatedCountries(int N){
+        String sql = "SELECT co.Code, co.Name AS CountryName, co.Continent, co.Region, co.Population, ci.Name AS CapitalName " +
+                "FROM country co LEFT JOIN city ci ON co.Capital = ci.ID " +
+                "ORDER BY co.Population DESC, CountryName ASC " +
+                "LIMIT ?";
+        return executeNQuery(sql, N);
+    }
+
     private List<Country> executeQuery(String sql, String field) {
         List<Country> countries = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
             if (field != null) pstmt.setString(1, field);
+            ResultSet rset = pstmt.executeQuery();
+            while (rset.next()) {
+                Country cnty = new Country();
+                cnty.setCode(rset.getString("Code"));
+                cnty.setName(rset.getString("CountryName"));
+                cnty.setContinent(rset.getString("Continent"));
+                cnty.setRegion(rset.getString("Region"));
+                cnty.setPopulation(rset.getInt("Population"));
+                cnty.setCapitalName(rset.getString("CapitalName"));
+                countries.add(cnty);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error fetching countries: " + e.getMessage());
+        }
+        return countries;
+    }
+
+    private List<Country> executeNQuery(String sql, int N) {
+
+        if (N < 0) {
+            System.out.println("Value of N should be more than zero (0)");
+            return null;
+        }
+
+        List<Country> countries = new ArrayList<>();
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setInt(1, N);
             ResultSet rset = pstmt.executeQuery();
             while (rset.next()) {
                 Country cnty = new Country();
