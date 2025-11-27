@@ -14,4 +14,6 @@ public class CountryController {
     public List<Country> getCountriesByPopulation() {
         return countryRepo.getAllCountriesOrderByPopulationDesc();
     }
+
+    public List<Country> getCountriesFromContinent(String continent) {return countryRepo.getAllCountriesInContinentOrderByPopulationDesc(continent); }
 }
