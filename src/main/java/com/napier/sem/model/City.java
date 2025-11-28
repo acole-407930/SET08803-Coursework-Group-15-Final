@@ -17,7 +17,7 @@ public class City {
         this.id = id;
         this.name = name;
         this.countryCode = countryCode;
-        this.countryName = countryName;   // <-- NEW PARAM
+        this.countryName = countryName;
         this.district = district;
         this.population = population;
     }

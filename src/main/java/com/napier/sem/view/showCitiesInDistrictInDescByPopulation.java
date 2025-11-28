@@ -11,7 +11,7 @@ public class showCitiesInDistrictInDescByPopulation {
         System.out.println("========================================================");
 
         System.out.printf("%-25s %-20s %-20s %15s%n",
-                "City Name", "Country", "District", "Population");
+                "City", "Country", "District", "Population");
         System.out.println("--------------------------------------------------------------------------");
 
         if (cities == null || cities.isEmpty()) {
