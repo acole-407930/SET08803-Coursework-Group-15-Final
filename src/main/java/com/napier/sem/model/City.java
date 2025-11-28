@@ -5,17 +5,20 @@ public class City {
     private int id;
     private String name;
     private String countryCode;
+    private String countryName;
     private String district;
     private int population;
+
 
     // --- Constructors ---
     public City() {
     }
 
-    public City(int id, String name, String countryCode, String district, int population) {
+    public City(int id, String name, String countryCode, String countryName, String district, int population) {
         this.id = id;
         this.name = name;
         this.countryCode = countryCode;
+        this.countryName = countryName;   //
         this.district = district;
         this.population = population;
     }
@@ -24,7 +27,6 @@ public class City {
     public int getId() {
         return id;
     }
-
     public void setId(int id) {
         this.id = id;
     }
@@ -32,7 +34,6 @@ public class City {
     public String getName() {
         return name;
     }
-
     public void setName(String name) {
         this.name = name;
     }
@@ -40,15 +41,16 @@ public class City {
     public String getCountryCode() {
         return countryCode;
     }
-
     public void setCountryCode(String countryCode) {
         this.countryCode = countryCode;
     }
 
+    public String getCountryName() { return countryName; }  // <-- NEW GETTER
+    public void setCountryName(String countryName) { this.countryName = countryName; }
+
     public String getDistrict() {
         return district;
     }
-
     public void setDistrict(String district) {
         this.district = district;
     }
@@ -56,7 +58,6 @@ public class City {
     public int getPopulation() {
         return population;
     }
-
     public void setPopulation(int population) {
         this.population = population;
     }
@@ -68,6 +69,7 @@ public class City {
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", countryCode='" + countryCode + '\'' +
+                ", countryName='" + countryName + '\'' +   // ✅ now included
                 ", district='" + district + '\'' +
                 ", population=" + population +
                 '}';

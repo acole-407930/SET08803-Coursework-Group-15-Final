@@ -10,10 +10,16 @@ public class ShowCitiesInCountryByPopulation {
         System.out.println(" CITIES IN " + countryName.toUpperCase() + " (Largest → Smallest Population)");
         System.out.println("------------------------------------------------------------");
 
+        System.out.printf("%-25s %-20s %-20s %15s%n",
+                "City", "Country", "District", "Population");
+        System.out.println("--------------------------------------------------------------------------");
+
         for (City c : cities) {
-            System.out.printf(
-                    "City: %-25s | District: %-15s | Code: %-5s | Population: %,d%n",
-                    c.getName(), c.getDistrict(), c.getCountryCode(), c.getPopulation()
+            System.out.printf("%-25s %-20s %-20s %,15d%n",
+                    c.getName(),
+                    c.getCountryName(),
+                    c.getDistrict(),
+                    c.getPopulation()
             );
         }
 
