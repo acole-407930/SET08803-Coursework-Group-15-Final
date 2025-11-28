@@ -18,7 +18,6 @@ public class CityRepoImp implements CityRepo {
     public List<City> getCitiesInCountryByPopulation(String countryName) {
         List<City> cities = new ArrayList<>();
 
-        // Safety checks
         if (con == null) {
             System.out.println("Database connection is null.");
             return cities;
@@ -29,32 +28,72 @@ public class CityRepoImp implements CityRepo {
             return cities;
         }
 
-        // Use normal string concatenation instead of """ text block """
         String sql =
-                "SELECT ci.ID, ci.Name AS City, ci.CountryCode, ci.District, ci.Population " +
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, ci.District, ci.Population " +
                         "FROM city ci " +
                         "JOIN country co ON ci.CountryCode = co.Code " +
                         "WHERE co.Name = ? " +
-                        "ORDER BY ci.Population DESC, ci.Name ASC;";
+                        "ORDER BY ci.Population DESC, CityName ASC";
 
         try (PreparedStatement stmt = con.prepareStatement(sql)) {
-
             stmt.setString(1, countryName);
-            ResultSet rs = stmt.executeQuery();
 
-            while (rs.next()) {
-                City city = new City(
-                        rs.getInt("ID"),
-                        rs.getString("City"),
-                        rs.getString("CountryCode"),
-                        rs.getString("District"),
-                        rs.getInt("Population")
-                );
-                cities.add(city);
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    City city = new City(
+                            rs.getInt("ID"),
+                            rs.getString("CityName"),
+                            rs.getString("CountryCode"),
+                            rs.getString("District"),
+                            rs.getInt("Population")
+                    );
+                    cities.add(city);
+                }
             }
-
         } catch (SQLException e) {
-            System.out.println("SQL Query Failed: " + e.getMessage());
+            System.out.println("Error retrieving cities by country: " + e.getMessage());
+        }
+
+        return cities;
+    }
+
+    @Override
+    public List<City> getCitiesInDistrictByPopulation(String districtName) {
+        List<City> cities = new ArrayList<>();
+
+        if (con == null) {
+            System.out.println("Database connection is null.");
+            return cities;
+        }
+
+        if (districtName == null || districtName.trim().isEmpty()) {
+            System.out.println("District name cannot be null or empty.");
+            return cities;
+        }
+
+        String sql =
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, ci.District, ci.Population " +
+                        "FROM city ci " +
+                        "WHERE ci.District = ? " +
+                        "ORDER BY ci.Population DESC, CityName ASC";
+
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setString(1, districtName);
+
+            try (ResultSet rs = stmt.executeQuery()) {
+                while (rs.next()) {
+                    City city = new City(
+                            rs.getInt("ID"),
+                            rs.getString("CityName"),
+                            rs.getString("CountryCode"),
+                            rs.getString("District"),
+                            rs.getInt("Population")
+                    );
+                    cities.add(city);
+                }
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving cities by district: " + e.getMessage());
         }
 
         return cities;
