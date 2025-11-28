@@ -1,14 +1,13 @@
 package com.napier.sem.app;
 
+import com.napier.sem.controller.CityController;
+import com.napier.sem.repository.CityRepoImp;
 import com.napier.sem.util.DBConnection;
 import com.napier.sem.repository.CountryRepoImp;
 import com.napier.sem.controller.CountryController;
 
 //views
-import com.napier.sem.view.showCountriesInDescByPopulation;
-import com.napier.sem.view.showCountriesInContinent;
-import com.napier.sem.view.showCountriesFromRegion;
-import com.napier.sem.view.showTopNCountriesPopulation;
+import com.napier.sem.view.*;
 
 
 import java.sql.Connection;
@@ -32,6 +31,12 @@ public class App {
         continent_view.displayCountries(c_controller.getCountriesFromContinent("Asia")); //use case 10
         region_view.displayCountries(c_controller.getCountriesFromRegion("Central America")); //use case 11
         top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);
+
+        CityController cityController = new CityController(new CityRepoImp(con));
+        ShowCitiesInCountryByPopulation cityView = new ShowCitiesInCountryByPopulation();
+
+        cityView.displayCities(cityController.getCitiesInCountryByPopulation("Japan"), "Japan");
+
 
         db.disconnect(con);
     }
