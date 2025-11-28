@@ -5,4 +5,6 @@ import java.util.List;
 
 public interface CityRepo {
     List<City> getCitiesInCountryByPopulation(String countryName);
+
+    List<City> getCitiesInDistrictByPopulation(String districtName);
 }
