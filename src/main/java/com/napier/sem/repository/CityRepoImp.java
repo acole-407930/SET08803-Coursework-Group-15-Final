@@ -14,22 +14,20 @@ public class CityRepoImp implements CityRepo {
         this.con = con;
     }
 
+    // =========================================================
+    // 1) Cities in Country (Largest → Smallest) + Country Name
+    // =========================================================
     @Override
     public List<City> getCitiesInCountryByPopulation(String countryName) {
         List<City> cities = new ArrayList<>();
 
-        if (con == null) {
-            System.out.println("Database connection is null.");
-            return cities;
-        }
-
-        if (countryName == null || countryName.trim().isEmpty()) {
-            System.out.println("Country name cannot be null or empty.");
+        if (con == null || countryName == null || countryName.trim().isEmpty()) {
+            System.out.println("Invalid input or database connection.");
             return cities;
         }
 
         String sql =
-                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, ci.District, ci.Population " +
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, ci.District, ci.Population, co.Name AS CountryName " +
                         "FROM city ci " +
                         "JOIN country co ON ci.CountryCode = co.Code " +
                         "WHERE co.Name = ? " +
@@ -37,19 +35,20 @@ public class CityRepoImp implements CityRepo {
 
         try (PreparedStatement stmt = con.prepareStatement(sql)) {
             stmt.setString(1, countryName);
+            ResultSet rs = stmt.executeQuery();
 
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    City city = new City(
-                            rs.getInt("ID"),
-                            rs.getString("CityName"),
-                            rs.getString("CountryCode"),
-                            rs.getString("District"),
-                            rs.getInt("Population")
-                    );
-                    cities.add(city);
-                }
+            while (rs.next()) {
+                City city = new City(
+                        rs.getInt("ID"),
+                        rs.getString("CityName"),
+                        rs.getString("CountryCode"),
+                        rs.getString("CountryName"),   // NEW
+                        rs.getString("District"),
+                        rs.getInt("Population")
+                );
+                cities.add(city);
             }
+
         } catch (SQLException e) {
             System.out.println("Error retrieving cities by country: " + e.getMessage());
         }
@@ -57,41 +56,42 @@ public class CityRepoImp implements CityRepo {
         return cities;
     }
 
+
+    // =========================================================
+    // 2) Cities in District (Largest → Smallest) + Country Name
+    // =========================================================
     @Override
     public List<City> getCitiesInDistrictByPopulation(String districtName) {
         List<City> cities = new ArrayList<>();
 
-        if (con == null) {
-            System.out.println("Database connection is null.");
-            return cities;
-        }
-
-        if (districtName == null || districtName.trim().isEmpty()) {
-            System.out.println("District name cannot be null or empty.");
+        if (con == null || districtName == null || districtName.trim().isEmpty()) {
+            System.out.println("Invalid input or database connection.");
             return cities;
         }
 
         String sql =
-                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, ci.District, ci.Population " +
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, co.Name AS CountryName, ci.District, ci.Population " +
                         "FROM city ci " +
+                        "JOIN country co ON ci.CountryCode = co.Code " +   // JOIN ADDED
                         "WHERE ci.District = ? " +
                         "ORDER BY ci.Population DESC, CityName ASC";
 
         try (PreparedStatement stmt = con.prepareStatement(sql)) {
             stmt.setString(1, districtName);
+            ResultSet rs = stmt.executeQuery();
 
-            try (ResultSet rs = stmt.executeQuery()) {
-                while (rs.next()) {
-                    City city = new City(
-                            rs.getInt("ID"),
-                            rs.getString("CityName"),
-                            rs.getString("CountryCode"),
-                            rs.getString("District"),
-                            rs.getInt("Population")
-                    );
-                    cities.add(city);
-                }
+            while (rs.next()) {
+                City city = new City(
+                        rs.getInt("ID"),
+                        rs.getString("CityName"),
+                        rs.getString("CountryCode"),
+                        rs.getString("CountryName"),    // NEW
+                        rs.getString("District"),
+                        rs.getInt("Population")
+                );
+                cities.add(city);
             }
+
         } catch (SQLException e) {
             System.out.println("Error retrieving cities by district: " + e.getMessage());
         }
