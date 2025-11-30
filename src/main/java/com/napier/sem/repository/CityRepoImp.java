@@ -6,6 +6,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 public class CityRepoImp implements CityRepo {
 
     private final Connection con;
@@ -98,6 +100,50 @@ public class CityRepoImp implements CityRepo {
         return cities;
     }
 
+    @Override
+    public List<City> getTopNMostPopulatedCitiesInWorld(int n) {
+        List<City> cities = new ArrayList<>();
+
+        if (con == null) {
+            System.out.println("Database connection is null.");
+            return cities;
+        }
+
+        if (n <= 0) {
+            System.out.println("N must be greater than 0.");
+            return cities;
+        }
+
+        String sql =
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, co.Name AS CountryName, " +
+                        "ci.District, ci.Population " +
+                        "FROM city ci " +
+                        "JOIN country co ON ci.CountryCode = co.Code " +
+                        "ORDER BY ci.Population DESC, CityName ASC " +
+                        "LIMIT ?";
+
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setInt(1, n);
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                City city = new City(
+                        rs.getInt("ID"),
+                        rs.getString("CityName"),
+                        rs.getString("CountryCode"),
+                        rs.getString("CountryName"),
+                        rs.getString("District"),
+                        rs.getInt("Population")
+                );
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving top N most populated cities in world: " + e.getMessage());
+        }
+
+        return cities;
+    }
+
     // =========================================================
     // 3) TOP N MOST POPULATED CITIES IN A COUNTRY (NEW)
     // =========================================================
@@ -141,6 +187,51 @@ public class CityRepoImp implements CityRepo {
 
         } catch (SQLException e) {
             System.out.println("Error retrieving Top N most populated cities in country: " + e.getMessage());
+        }
+
+        return cities;
+    }
+
+    // Issue #16 - Cities in Continent Population Largest to Smallest
+    @Override
+    public List<City> getCitiesInContinentByPopulation(String continentName) {
+        List<City> cities = new ArrayList<>();
+
+        if (con == null) {
+            System.out.println("Database connection is null.");
+            return cities;
+        }
+
+        if (continentName == null || continentName.trim().isEmpty()) {
+            System.out.println("Continent name cannot be null or empty.");
+            return cities;
+        }
+
+        String sql =
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, co.Name AS CountryName, " +
+                        "ci.District, ci.Population " +
+                        "FROM city ci " +
+                        "JOIN country co ON ci.CountryCode = co.Code " +
+                        "WHERE co.Continent = ? " +
+                        "ORDER BY ci.Population DESC, CityName ASC";
+
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setString(1, continentName.trim());
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                City city = new City(
+                        rs.getInt("ID"),
+                        rs.getString("CityName"),
+                        rs.getString("CountryCode"),
+                        rs.getString("CountryName"),
+                        rs.getString("District"),
+                        rs.getInt("Population")
+                );
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving cities in continent by population: " + e.getMessage());
         }
 
         return cities;
