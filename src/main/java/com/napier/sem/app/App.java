@@ -52,7 +52,7 @@ public class App {
         topCitiesInCountryView.displayCities(cityController.getTopNCitiesInCountryByPopulation("Myanmar", 10), "Myanmar", 10);
 
         //Issue #16 - Show Cities In Continent by Population
-        showCitiesInContinentByPopulation citiesInContinentByPopulation = new showCitiesInContinentByPopulation(); // Isse
+        showCitiesInContinentByPopulation citiesInContinentByPopulation = new showCitiesInContinentByPopulation(); // Issue #12
         citiesInContinentByPopulation.displayCities(cityController.getCitiesInContinentByPopulation("Asia"), "Asia");
 
         db.disconnect(con);
