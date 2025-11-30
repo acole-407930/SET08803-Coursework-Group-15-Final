@@ -39,9 +39,8 @@ public class CountryRepoImp implements CountryRepo {
         return executeQuery(sql, region);
     }
 
-    // =========================
+
     // Top N (Global)
-    // =========================
     public List<Country> getTopNMostPopulatedCountries(int N) {
         String sql = "SELECT co.Code, co.Name AS CountryName, co.Continent, co.Region, co.Population, ci.Name AS CapitalName " +
                 "FROM country co LEFT JOIN city ci ON co.Capital = ci.ID " +
@@ -50,9 +49,8 @@ public class CountryRepoImp implements CountryRepo {
         return executeNQuery(sql, N);
     }
 
-    // =========================
+
     // Top N in a REGION (NEW)
-    // =========================
     public List<Country> getTopNCountriesInRegionByPopulation(String region, int N) {
         String sql = "SELECT co.Code, co.Name AS CountryName, co.Continent, co.Region, co.Population, ci.Name AS CapitalName " +
                 "FROM country co LEFT JOIN city ci ON co.Capital = ci.ID " +
