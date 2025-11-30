@@ -23,6 +23,8 @@ The following tools were used to make the project possible:
 - **MySQL** – To interact with and integrate the `world.sql` database
 
 - **Git/GitHub** – For Scrum team collaboration and version control
+- **Zube | Agile project management** with a seamless GitHub integration
+  Zube lets the product team work alongside the developers. The GitHub integration always keeps developer issues up to date.
 
 ---
 
@@ -38,22 +40,16 @@ The project deliverables are as follows:
 
 4. Use Cases / Diagram
 
----
 
+---
 ## Team Members
 
 | Name | Student ID | Role |
-
 |------|-------------|------|
-
 | Sergio Pech | 40735258 | Scrum Master |
-
 | Aiden Coleman | 40733930 | Product Owner |
-
 | Rowan Bishop | 40740506 | Team Member |
-
 | Stephanie Kothdiwala | 40679664 | Team Member |
-
 | Zoe Villanueva | 40733245 | Team Member |
  
 ---
@@ -81,6 +77,4 @@ Code Review 1 Contribution	Detail
 
 * [![codecov](https://codecov.io/gh/acole-407930/SET08803-Coursework-Group-15/graph/badge.svg?token=OAULO1R7Y3)](https://codecov.io/gh/acole-407930/SET08803-Coursework-Group-15)
 
-  Zube | Agile project management with a seamless GitHub integration
-  Zube lets the product team work alongside the developers. The GitHub integration always keeps developer issues up to date.
  
