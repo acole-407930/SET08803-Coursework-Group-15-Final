@@ -15,7 +15,7 @@ public class CityRepoImp implements CityRepo {
     }
 
     // =========================================================
-    // 1) Cities in Country (Largest → Smallest) + Country Name
+    // 18) Cities in Country (Largest → Smallest) + Country Name
     // =========================================================
     @Override
     public List<City> getCitiesInCountryByPopulation(String countryName) {
@@ -57,7 +57,7 @@ public class CityRepoImp implements CityRepo {
     }
 
     // =========================================================
-    // 2) Cities in District (Largest → Smallest) + Country Name
+    // 19) Cities in District (Largest → Smallest) + Country Name
     // =========================================================
     @Override
     public List<City> getCitiesInDistrictByPopulation(String districtName) {

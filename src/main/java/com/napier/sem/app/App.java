@@ -24,23 +24,24 @@ public class App {
         showCountriesInContinent continent_view = new showCountriesInContinent();
         showCountriesFromRegion region_view = new showCountriesFromRegion();
         showTopNCountriesPopulation top_N_C_Pop = new showTopNCountriesPopulation();
+        showTopMostNPopulatedCountriesInNContinent topCountriesInContinent = new showTopMostNPopulatedCountriesInNContinent();
 
         c_view.displayCountries(c_controller.getCountriesByPopulation());                     // use case 9
         continent_view.displayCountries(c_controller.getCountriesFromContinent("Asia"));       // use case 10
         region_view.displayCountries(c_controller.getCountriesFromRegion("Central America"));  // use case 11
-        top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);     // use case 14
-
+        top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);
+        topCountriesInContinent.displayCountries(c_controller.getTopMostNPopulatedCountriesInNContinent(5, "Asia"), 5, "Asia");
 
         // ===== CITY CONTROLLER =====
         CityController cityController = new CityController(new CityRepoImp(con));
 
 
         ShowCitiesInCountryByPopulation cityView = new ShowCitiesInCountryByPopulation();
-        cityView.displayCities(cityController.getCitiesInCountryByPopulation("Japan"), "Japan");
+        cityView.displayCities(cityController.getCitiesInCountryByPopulation("Japan"), "Japan");// use case 18
 
 
         showCitiesInDistrictInDescByPopulation districtView = new showCitiesInDistrictInDescByPopulation();
-        districtView.displayCities(cityController.getCitiesInDistrictByPopulation("Rio de Janeiro"), "Rio de Janeiro");
+        districtView.displayCities(cityController.getCitiesInDistrictByPopulation("Rio de Janeiro"), "Rio de Janeiro");// use case 19
 
         // TOP N IN REGION
         showTopNCountriesInRegionByPopulation regionTopNView = new showTopNCountriesInRegionByPopulation();
