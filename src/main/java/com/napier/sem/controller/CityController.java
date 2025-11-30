@@ -19,5 +19,6 @@ public class CityController {
 
     public List<City> getCitiesInContinentByPopulation(String continentName) {return cityRepo.getCitiesInContinentByPopulation(continentName);}
 
+    public List<City> getTopNCitiesInCountryByPopulation(String countryName, int n) {return cityRepo.getTopNCitiesInCountryByPopulation(countryName, n);}
 
 }
