@@ -99,17 +99,16 @@ public class CityRepoImp implements CityRepo {
     }
 
     // =========================================================
-    //  14) Top N Most Populated Cities in the World
+    // 3) TOP N MOST POPULATED CITIES IN A COUNTRY (NEW)
     // =========================================================
     @Override
-    public List<City> getTopNMostPopulatedCitiesInWorld(int n) {
+    public List<City> getTopNCitiesInCountryByPopulation(String countryName, int n) {
         List<City> cities = new ArrayList<>();
 
-        if (con == null) {
-            System.out.println("Database connection is null.");
+        if (con == null || countryName == null || countryName.trim().isEmpty()) {
+            System.out.println("Invalid input or database connection.");
             return cities;
         }
-
         if (n <= 0) {
             System.out.println("N must be greater than 0.");
             return cities;
@@ -120,26 +119,28 @@ public class CityRepoImp implements CityRepo {
                         "ci.District, ci.Population " +
                         "FROM city ci " +
                         "JOIN country co ON ci.CountryCode = co.Code " +
+                        "WHERE co.Name = ? " +
                         "ORDER BY ci.Population DESC, CityName ASC " +
                         "LIMIT ?";
 
         try (PreparedStatement stmt = con.prepareStatement(sql)) {
-            stmt.setInt(1, n);
-
+            stmt.setString(1, countryName);
+            stmt.setInt(2, n);
             ResultSet rs = stmt.executeQuery();
+
             while (rs.next()) {
-                City city = new City(
+                cities.add(new City(
                         rs.getInt("ID"),
                         rs.getString("CityName"),
                         rs.getString("CountryCode"),
                         rs.getString("CountryName"),
                         rs.getString("District"),
                         rs.getInt("Population")
-                );
-                cities.add(city);
+                ));
             }
+
         } catch (SQLException e) {
-            System.out.println("Error retrieving top N most populated cities in world: " + e.getMessage());
+            System.out.println("Error retrieving Top N most populated cities in country: " + e.getMessage());
         }
 
         return cities;
