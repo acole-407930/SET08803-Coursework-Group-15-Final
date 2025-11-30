@@ -4,7 +4,8 @@ import com.napier.sem.model.Country;
 import com.napier.sem.repository.CountryRepo;
 import java.util.List;
 
-public class CountryController {
+public class CountryController
+{
     private final CountryRepo countryRepo;
 
     public CountryController(CountryRepo countryRepo) {

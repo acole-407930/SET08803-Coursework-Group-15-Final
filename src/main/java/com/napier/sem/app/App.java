@@ -34,18 +34,15 @@ public class App {
         // ===== CITY CONTROLLER =====
         CityController cityController = new CityController(new CityRepoImp(con));
 
-        // ===== CITIES IN COUNTRY =====
+
         ShowCitiesInCountryByPopulation cityView = new ShowCitiesInCountryByPopulation();
         cityView.displayCities(cityController.getCitiesInCountryByPopulation("Japan"), "Japan");
 
-        // ===== CITIES IN DISTRICT =====
+
         showCitiesInDistrictInDescByPopulation districtView = new showCitiesInDistrictInDescByPopulation();
         districtView.displayCities(cityController.getCitiesInDistrictByPopulation("Rio de Janeiro"), "Rio de Janeiro");
 
-
-        // =====================================================================
-        //                🔥 LAST OUTPUT — TOP N IN REGION 🔥
-        // =====================================================================
+        // TOP N IN REGION
         showTopNCountriesInRegionByPopulation regionTopNView = new showTopNCountriesInRegionByPopulation();
 
 

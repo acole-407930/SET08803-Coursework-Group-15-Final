@@ -63,9 +63,7 @@ public class CountryRepoImp implements CountryRepo {
         return executeRegionNQuery(sql, region, N);
     }
 
-    // =========================
-    // Shared helpers
-    // =========================
+
     private List<Country> executeQuery(String sql, String field) {
         List<Country> countries = new ArrayList<>();
         try (PreparedStatement pstmt = con.prepareStatement(sql)) {
