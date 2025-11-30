@@ -24,11 +24,19 @@ public class App {
         showCountriesInContinent continent_view = new showCountriesInContinent();
         showCountriesFromRegion region_view = new showCountriesFromRegion();
         showTopNCountriesPopulation top_N_C_Pop = new showTopNCountriesPopulation();
+        showTopMostNPopulatedCountriesInNContinent top_N_Countries_in_Continent = new showTopMostNPopulatedCountriesInNContinent(); // Issue #12
 
         c_view.displayCountries(c_controller.getCountriesByPopulation()); // use case 9
+
         continent_view.displayCountries(c_controller.getCountriesFromContinent("Asia")); // use case 10
+
         region_view.displayCountries(c_controller.getCountriesFromRegion("Central America")); // use case 11
+
         top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);
+
+        top_N_Countries_in_Continent.displayCountries(c_controller.getTopMostNPopulatedCountriesInNContinent(5, "Asia"), 5, "Asia");// Issue #12
+
+
 
         // ===== CITY CONTROLLER =====
         CityController cityController = new CityController(new CityRepoImp(con));

@@ -8,5 +8,6 @@ public interface CountryRepo {
     List<Country> getAllCountriesInContinentOrderByPopulationDesc(String continent);
     List<Country> getAllCountriesPopulationFromLargestToSmallestByRegion(String region);
     List<Country> getTopNMostPopulatedCountries(int N);
+    public List<Country> getTopMostNPopulatedCountriesInNContinent(int N, String continent);
 }
 
