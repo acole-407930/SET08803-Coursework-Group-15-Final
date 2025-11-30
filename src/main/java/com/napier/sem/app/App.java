@@ -47,9 +47,9 @@ public class App {
         showTopNCountriesInRegionByPopulation regionTopNView = new showTopNCountriesInRegionByPopulation();
         regionTopNView.displayCountries(c_controller.getTopNCountriesInRegionByPopulation("Middle East", 10), "Middle East", 10);
 
-        // ===== TOP N MOST POPULATED CITIES IN THE WORLD =====
-        showTopNMostPopulatedCitiesInWorld topCitiesWorldView = new showTopNMostPopulatedCitiesInWorld();
-        topCitiesWorldView.displayCities(cityController.getTopNMostPopulatedCitiesInWorld(10), 10);
+
+        showtopNCitiesInCountryByPopulation topCitiesInCountryView = new showtopNCitiesInCountryByPopulation();
+        topCitiesInCountryView.displayCities(cityController.getTopNCitiesInCountryByPopulation("Myanmar", 10), "Myanmar", 10);
 
         //Issue #16 - Show Cities In Continent by Population
         showCitiesInContinentByPopulation citiesInContinentByPopulation = new showCitiesInContinentByPopulation(); // Isse
