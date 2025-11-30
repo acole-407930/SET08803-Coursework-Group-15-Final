@@ -28,7 +28,7 @@ public class App {
         c_view.displayCountries(c_controller.getCountriesByPopulation());                     // use case 9
         continent_view.displayCountries(c_controller.getCountriesFromContinent("Asia"));       // use case 10
         region_view.displayCountries(c_controller.getCountriesFromRegion("Central America"));  // use case 11
-        top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);     // use case 12
+        top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);     // use case 14
 
 
         // ===== CITY CONTROLLER =====
@@ -45,9 +45,7 @@ public class App {
         // TOP N IN REGION
         showTopNCountriesInRegionByPopulation regionTopNView = new showTopNCountriesInRegionByPopulation();
 
-
-        regionTopNView.displayCountries(
-                c_controller.getTopNCountriesInRegionByPopulation("Middle East", 10), "Middle East", 10);
+        regionTopNView.displayCountries(c_controller.getTopNCountriesInRegionByPopulation("Middle East", 10), "Middle East", 10);
 
         db.disconnect(con);
     }
