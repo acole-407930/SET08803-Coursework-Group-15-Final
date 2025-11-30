@@ -4,7 +4,8 @@ import com.napier.sem.model.Country;
 import com.napier.sem.repository.CountryRepo;
 import java.util.List;
 
-public class CountryController {
+public class CountryController
+{
     private final CountryRepo countryRepo;
 
     public CountryController(CountryRepo countryRepo) {
@@ -20,4 +21,7 @@ public class CountryController {
     public List<Country> getCountriesFromRegion(String region) {return countryRepo.getAllCountriesPopulationFromLargestToSmallestByRegion(region); }
 
     public List<Country> getTopNMostPopulatedCountries(int N) {return countryRepo.getTopNMostPopulatedCountries(N);}
+
+    public List<Country> getTopNCountriesInRegionByPopulation(String regionName, int n) {return countryRepo.getTopNCountriesInRegionByPopulation(regionName, n);}
+
 }
