@@ -8,7 +8,6 @@ public interface CityRepo {
 
     List<City> getCitiesInDistrictByPopulation(String districtName);
 
-    List<City> getTopNMostPopulatedCitiesInWorld(int n);
-
+    List<City> getTopNCitiesInCountryByPopulation(String countryName, int n);
 
 }
