@@ -25,26 +25,27 @@ public class App {
         showCountriesFromRegion region_view = new showCountriesFromRegion();
         showTopNCountriesPopulation top_N_C_Pop = new showTopNCountriesPopulation();
 
-        c_view.displayCountries(c_controller.getCountriesByPopulation()); // use case 9
-        continent_view.displayCountries(c_controller.getCountriesFromContinent("Asia")); // use case 10
-        region_view.displayCountries(c_controller.getCountriesFromRegion("Central America")); // use case 11
-        top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);
+        c_view.displayCountries(c_controller.getCountriesByPopulation());                     // use case 9
+        continent_view.displayCountries(c_controller.getCountriesFromContinent("Asia"));       // use case 10
+        region_view.displayCountries(c_controller.getCountriesFromRegion("Central America"));  // use case 11
+        top_N_C_Pop.displayCountries(c_controller.getTopNMostPopulatedCountries(10), 10);     // use case 14
+
 
         // ===== CITY CONTROLLER =====
         CityController cityController = new CityController(new CityRepoImp(con));
 
-        // ===== CITIES IN COUNTRY (EXISTING) =====
+
         ShowCitiesInCountryByPopulation cityView = new ShowCitiesInCountryByPopulation();
-        cityView.displayCities(
-                cityController.getCitiesInCountryByPopulation("Japan"),
-                "Japan"
-        );
+        cityView.displayCities(cityController.getCitiesInCountryByPopulation("Japan"), "Japan");
 
 
         showCitiesInDistrictInDescByPopulation districtView = new showCitiesInDistrictInDescByPopulation();
-
-
         districtView.displayCities(cityController.getCitiesInDistrictByPopulation("Rio de Janeiro"), "Rio de Janeiro");
+
+        // TOP N IN REGION
+        showTopNCountriesInRegionByPopulation regionTopNView = new showTopNCountriesInRegionByPopulation();
+
+        regionTopNView.displayCountries(c_controller.getTopNCountriesInRegionByPopulation("Middle East", 10), "Middle East", 10);
 
         db.disconnect(con);
     }
