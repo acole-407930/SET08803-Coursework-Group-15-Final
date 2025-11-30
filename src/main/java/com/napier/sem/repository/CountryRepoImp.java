@@ -61,6 +61,18 @@ public class CountryRepoImp implements CountryRepo {
         return executeRegionNQuery(sql, region, N);
     }
 
+    // Top N Countries in N Continent
+    @Override
+    // Issue #12 - Assigned to Zoe Villanueva
+    public List<Country> getTopMostNPopulatedCountriesInNContinent(int N, String continent) {
+        String sql = "SELECT co.Code, co.Name AS CountryName, co.Continent, co.Region, co.Population, ci.Name AS CapitalName " +
+                "FROM country co LEFT JOIN city ci ON co.Capital = ci.ID " +
+                "WHERE co.Continent = ? " +
+                "ORDER BY co.Population DESC, CountryName ASC " +
+                "LIMIT " + N;  // Directly embed N in the SQL
+        return executeQuery(sql, continent);
+    }
+
 
     private List<Country> executeQuery(String sql, String field) {
         List<Country> countries = new ArrayList<>();
