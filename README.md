@@ -39,7 +39,7 @@ The project deliverables are as follows:
 3. Kanban Board/ Sprint Board  - https://zube.io/napier-513/devops-coursework-group-15/w/workspace-1/kanban
 
 4. Use Cases / Diagram
-5. 
+
 
 ---
 ## Team Members
