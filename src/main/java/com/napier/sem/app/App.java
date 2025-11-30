@@ -51,6 +51,9 @@ public class App {
         showTopNMostPopulatedCitiesInWorld topCitiesWorldView = new showTopNMostPopulatedCitiesInWorld();
         topCitiesWorldView.displayCities(cityController.getTopNMostPopulatedCitiesInWorld(10), 10);
 
+        //Issue #16 - Show Cities In Continent by Population
+        showCitiesInContinentByPopulation citiesInContinentByPopulation = new showCitiesInContinentByPopulation(); // Isse
+        citiesInContinentByPopulation.displayCities(cityController.getCitiesInContinentByPopulation("Asia"), "Asia");
 
         db.disconnect(con);
     }

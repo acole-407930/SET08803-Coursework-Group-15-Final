@@ -10,5 +10,7 @@ public interface CityRepo {
 
     List<City> getTopNMostPopulatedCitiesInWorld(int n);
 
+    List<City> getCitiesInContinentByPopulation(String continentName);
+
 
 }
