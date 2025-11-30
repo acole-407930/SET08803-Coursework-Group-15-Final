@@ -52,7 +52,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
                 <configuration>
-                    <finalName>devops</finalName>
+                    <finalName>SET08803-Coursework-Group-15---FINAL-1.0-jar-with-dependencies</finalName>
                     <archive>
                         <manifest>
                             <mainClass>com.napier.sem.app.App</mainClass>
