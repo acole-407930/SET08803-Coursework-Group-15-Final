@@ -9,11 +9,14 @@ public class CityController {
 
     private final CityRepo cityRepo;
 
-    public CityController(CityRepo cityRepo) {
-        this.cityRepo = cityRepo;
-    }
+    public CityController(CityRepo cityRepo) {this.cityRepo = cityRepo;}
 
     public List<City> getCitiesInCountryByPopulation(String countryName) {return cityRepo.getCitiesInCountryByPopulation(countryName);}
 
     public List<City> getCitiesInDistrictByPopulation(String districtName) {return cityRepo.getCitiesInDistrictByPopulation(districtName);}
+
+    public List<City> getTopNMostPopulatedCitiesInWorld(int n) {return cityRepo.getTopNMostPopulatedCitiesInWorld(n);}
+
+
+
 }
