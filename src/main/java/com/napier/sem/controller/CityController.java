@@ -16,4 +16,7 @@ public class CityController {
     public List<City> getCitiesInCountryByPopulation(String countryName) {return cityRepo.getCitiesInCountryByPopulation(countryName);}
 
     public List<City> getCitiesInDistrictByPopulation(String districtName) {return cityRepo.getCitiesInDistrictByPopulation(districtName);}
+
+    public List<City> getTopNCitiesInCountryByPopulation(String countryName, int n) {return cityRepo.getTopNCitiesInCountryByPopulation(countryName, n);}
+
 }

@@ -44,8 +44,12 @@ public class App {
 
         // TOP N IN REGION
         showTopNCountriesInRegionByPopulation regionTopNView = new showTopNCountriesInRegionByPopulation();
-
         regionTopNView.displayCountries(c_controller.getTopNCountriesInRegionByPopulation("Middle East", 10), "Middle East", 10);
+
+
+        showtopNCitiesInCountryByPopulation topCitiesInCountryView = new showtopNCitiesInCountryByPopulation();
+        topCitiesInCountryView.displayCities(cityController.getTopNCitiesInCountryByPopulation("Myanmar", 10), "Myanmar", 10);
+
 
         db.disconnect(con);
     }

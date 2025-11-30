@@ -7,4 +7,7 @@ public interface CityRepo {
     List<City> getCitiesInCountryByPopulation(String countryName);
 
     List<City> getCitiesInDistrictByPopulation(String districtName);
+
+    List<City> getTopNCitiesInCountryByPopulation(String countryName, int n);
+
 }
