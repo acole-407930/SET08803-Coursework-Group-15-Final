@@ -10,7 +10,7 @@ public class showtopNCitiesInCountryByPopulation {
         System.out.println(" TOP " + n + " MOST POPULATED CITIES IN " + countryName.toUpperCase());
         System.out.println("==============================================================================================");
 
-        System.out.printf("%-30s %-25s %-20s %15s%n",
+        System.out.printf("%-30s %-25s %-30s %15s%n",
                 "City", "Country", "District", "Population");
         System.out.println("----------------------------------------------------------------------------------------------");
 
