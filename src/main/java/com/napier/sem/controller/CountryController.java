@@ -20,4 +20,7 @@ public class CountryController {
     public List<Country> getCountriesFromRegion(String region) {return countryRepo.getAllCountriesPopulationFromLargestToSmallestByRegion(region); }
 
     public List<Country> getTopNMostPopulatedCountries(int N) {return countryRepo.getTopNMostPopulatedCountries(N);}
+
+    public List<Country> getTopNCountriesInRegionByPopulation(String regionName, int n) {return countryRepo.getTopNCountriesInRegionByPopulation(regionName, n);}
+
 }
