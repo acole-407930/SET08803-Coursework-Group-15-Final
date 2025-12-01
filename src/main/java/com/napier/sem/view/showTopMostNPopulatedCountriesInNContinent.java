@@ -29,7 +29,7 @@ public class showTopMostNPopulatedCountriesInNContinent {
 //        r1.toString();
 
         //generate the .md report equivalent...
-        //Reportable.generateReport(countries, "topNCountries.md");
+        Reportable.generateCountryReports(countries, "topNCountries.md");
 
         //reports/
         //Reportable.generateReport();
