@@ -1,11 +1,9 @@
 package com.napier.sem.view;
 
 import com.napier.sem.model.Region;
-
 import java.util.List;
 
 public class showRegionPopulationCityVsNonCity {
-
 
     public void displayRegionPopulationCityVsNonCity(List<Region> regions) {
 
@@ -14,13 +12,12 @@ public class showRegionPopulationCityVsNonCity {
             return;
         }
 
-        System.out.println("\n===========================================================================");
-        System.out.println("   POPULATION LIVING IN CITIES VS NOT LIVING IN CITIES – BY REGION");
-        System.out.println("===========================================================================");
+        System.out.println("\n==============================================================================================");
+        System.out.println(" POPULATION LIVING IN CITIES VS NOT LIVING IN CITIES – BY REGION");
+        System.out.println("==============================================================================================");
 
-        // Header: Region | Total Population | City Population | Non-City Population | City % | Non-City %
         System.out.printf(
-                "%-25s %15s %15s %15s %10s %12s%n",
+                "%-30s %18s %18s %18s %10s %12s%n",
                 "Region",
                 "Total Population",
                 "City Population",
@@ -28,12 +25,11 @@ public class showRegionPopulationCityVsNonCity {
                 "City %",
                 "Non-City %"
         );
-        System.out.println("--------------------------------------------------------------------------------------------" +
-                "-----------");
+        System.out.println("--------------------------------------------------------------------------------------------------------------");
 
         for (Region r : regions) {
             System.out.printf(
-                    "%-25s %,15d %,15d %,15d %9.2f%% %11.2f%%%n",
+                    "%-30s %,18d %,18d %,18d %9.2f%% %11.2f%%%n",
                     r.getRegionName(),
                     r.getTotalCityPopulation(),
                     r.getUrbanPopulation(),
@@ -43,7 +39,6 @@ public class showRegionPopulationCityVsNonCity {
             );
         }
 
-        System.out.println("--------------------------------------------------------------------------------------------" +
-                "-----------\n");
+        System.out.println("--------------------------------------------------------------------------------------------------------------\n");
     }
 }
