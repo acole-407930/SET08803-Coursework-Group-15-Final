@@ -315,7 +315,7 @@ public class CityRepoImp implements CityRepo {
 
         return cities;
     }
-
+    // Issue #22
     @Override
     public List<City> getNCitiesInRegionByPopulation(String regionName, Integer topN) {
         List<City> cities = new ArrayList<>();
@@ -369,5 +369,58 @@ public class CityRepoImp implements CityRepo {
         return cities;
     }
 
+    // Issue #24
+    @Override
+    public List<City> getNCitiesInDistrictByPopulation(String districtName, Integer topN) {
+        List<City> cities = new ArrayList<>();
+
+        if (con == null) {
+            System.out.println("Database connection is null.");
+            return cities;
+        }
+
+        if (districtName == null || districtName.trim().isEmpty()) {
+            System.out.println("District name cannot be null or empty.");
+            return cities;
+        }
+
+        StringBuilder sql = new StringBuilder(
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, co.Name AS CountryName, " +
+                        "ci.District, ci.Population " +
+                        "FROM city ci " +
+                        "JOIN country co ON ci.CountryCode = co.Code " +
+                        "WHERE ci.District = ? " +
+                        "ORDER BY ci.Population DESC, CityName ASC");
+
+        // Add LIMIT clause if topN is provided
+        if (topN != null && topN > 0) {
+            sql.append(" LIMIT ?");
+        }
+
+        try (PreparedStatement stmt = con.prepareStatement(sql.toString())) {
+            stmt.setString(1, districtName.trim());
+
+            if (topN != null && topN > 0) {
+                stmt.setInt(2, topN);
+            }
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                City city = new City(
+                        rs.getInt("ID"),
+                        rs.getString("CityName"),
+                        rs.getString("CountryCode"),
+                        rs.getString("CountryName"),
+                        rs.getString("District"),
+                        rs.getInt("Population")
+                );
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving cities in district by population: " + e.getMessage());
+        }
+
+        return cities;
+    }
 
 }

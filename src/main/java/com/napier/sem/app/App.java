@@ -67,6 +67,11 @@ public class App {
         showtopNCitiesInRegionByPopulation citiesInRegionByPopulation = new showtopNCitiesInRegionByPopulation();
         citiesInRegionByPopulation.displayCities(cityController.getNCitiesInRegionByPopulation("Caribbean", 3), "Caribbean", 3);
 
+        //Issue #24
+        showNCitiesInDistrictByPopulation citiesInDistrictByPopulation = new showNCitiesInDistrictByPopulation();
+        citiesInDistrictByPopulation.displayCities(cityController.getNCitiesInDistrictByPopulation("California", 5), "California", 5);
+
+
         // Region Controller
         RegionController regionController = new RegionController(new RegionRepoImp(con));
         showRegionPopulationCityVsNonCity regionView = new showRegionPopulationCityVsNonCity();
