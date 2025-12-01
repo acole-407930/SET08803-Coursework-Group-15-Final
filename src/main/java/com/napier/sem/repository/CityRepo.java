@@ -10,5 +10,9 @@ public interface CityRepo {
 
     List<City> getTopNMostPopulatedCitiesInWorld(int n);
 
+    long getTotalPopulationOfDistrict(String districtName);
+
 
 }
+
+
