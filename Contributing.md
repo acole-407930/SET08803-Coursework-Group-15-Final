@@ -224,5 +224,3 @@ For assistance:
 * Document blockers early so the team can support
 
 ---
-
-If you'd like, I can now generate the **polished CODE_OF_CONDUCT.md** that matches this CONTRIBUTING file perfectly.
