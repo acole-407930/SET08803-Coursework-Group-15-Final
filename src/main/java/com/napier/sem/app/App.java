@@ -1,7 +1,9 @@
 package com.napier.sem.app;
 
 import com.napier.sem.controller.CityController;
+import com.napier.sem.controller.PopulationController;
 import com.napier.sem.repository.CityRepoImp;
+import com.napier.sem.repository.PopulationRepoImp;
 import com.napier.sem.util.DBConnection;
 import com.napier.sem.repository.CountryRepoImp;
 import com.napier.sem.controller.CountryController;
@@ -78,6 +80,12 @@ public class App {
 
         regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
 
+        // Population Controller - Issue #31
+        PopulationController populationController = new PopulationController(new PopulationRepoImp(con));
+
+        // Issue #31
+        showPopulationByContinentStats populationByContinentStats = new showPopulationByContinentStats();
+        populationByContinentStats.displayPopulationStats(populationController.getPopulationByContinentStats());
         // ===== TOTAL POPULATION OF A DISTRICT =====
         showTotalPopulationOfDistrict districtPopView = new showTotalPopulationOfDistrict();
         String districtName = "Rio de Janeiro";   // the analyst's chosen district
