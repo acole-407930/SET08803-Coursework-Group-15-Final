@@ -56,7 +56,7 @@ The project deliverables are as follows:
 
 # Country and City Population Reports
 
-## Complete Requirements Table
+## Complete Requirements Table (32 Reports)
 
 | ID | Requirement Name | Status | Screenshot |
 |----|------------------|--------|------------|
@@ -89,6 +89,17 @@ The project deliverables are as follows:
 | 23 | The population of people, people living in cities, and people not living in cities in each continent. | No | |
 | 24 | The population of people, people living in cities, and people not living in cities in each region. | No | |
 | 25 | The population of people, people living in cities, and people not living in cities in each country. | No | |
+| **5. Specific Population Reports** |
+| 26 | The population of the world. | No | |
+| 27 | The population of a continent. | No | |
+| 28 | The population of a region. | No | |
+| 29 | The population of a country. | No | |
+| 30 | The population of a district. | No | |
+| 31 | The population of a city. | No | |
+| **6. Language Reports** |
+| 32 | The number of people who speak Chinese, English, Hindi, Spanish, Arabic from greatest to smallest, including percentage of world population. | No | |
+
+**Note:** This table includes all 32 requested reports organized into 6 categories.
 
 
 
