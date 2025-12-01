@@ -29,5 +29,8 @@ public class CityController {
 
     public List<City> getNCitiesInDistrictByPopulation(String districtName, Integer topN) {return cityRepo.getNCitiesInDistrictByPopulation(districtName,topN); }
 
-    }
+    public long getTotalPopulationOfCity(String cityName) {return cityRepo.getTotalPopulationOfCity(cityName);}
+
+
+}
 
