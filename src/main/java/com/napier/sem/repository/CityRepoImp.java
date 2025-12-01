@@ -5,7 +5,7 @@ import com.napier.sem.model.City;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
-
+import java.util.Map;
 
 
 public class CityRepoImp implements CityRepo {
@@ -422,5 +422,4 @@ public class CityRepoImp implements CityRepo {
 
         return cities;
     }
-
 }
