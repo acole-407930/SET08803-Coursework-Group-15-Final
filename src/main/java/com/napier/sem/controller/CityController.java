@@ -24,5 +24,8 @@ public class CityController {
     public List<City> getNCitiesInNContinentByPopulation(String continentName, int n) {return cityRepo.getNCitiesInNContinentByPopulation(continentName, n);}
 
     public List<City> getNCitiesInRegionByPopulation(String regionName, Integer topN)  {return cityRepo.getNCitiesInRegionByPopulation(regionName, topN); }
-}
+
+    public List<City> getNCitiesInDistrictByPopulation(String districtName, Integer topN) {return cityRepo.getNCitiesInDistrictByPopulation(districtName,topN); }
+
+    }
 
