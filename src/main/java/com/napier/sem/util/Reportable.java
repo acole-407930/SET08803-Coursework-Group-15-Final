@@ -14,14 +14,22 @@ public class Reportable {
 
         StringBuilder sb = new StringBuilder();
 
-        // Print header
-        sb.append("| Code | Name | Continent | Region | Population | Capital  |\r\n");
-        sb.append("| --- | --- | --- | --- | --- | --- | --- |\r\n");
-        // Loop over all employees in the list
+        // Table Headers
+        sb.append("| Code | Name | Continent | Region | Population | Capital |\r\n");
+        sb.append("| ---  | ---  | ---       | ---    | ---------: | ---     |\r\n");
+
+        // Table Rows
         for (Country c : countries) {
             if (c == null) continue;
-            sb.append("| ").append(c.getCode()).append(" | ").append(c.getName()).append(" | ").append(c.getContinent()).append(" | ").append(c.getRegion()).append(" | ").append(c.getPopulation()).append(" | ").append(c.getCapitalName()).append(" | ").append(" |\r\n");
+            sb.append("| ")
+                    .append(c.getCode()).append(" | ")
+                    .append(c.getName()).append(" | ")
+                    .append(c.getContinent()).append(" | ")
+                    .append(c.getRegion()).append(" | ")
+                    .append(String.format("%,d", c.getPopulation())).append(" | ")
+                    .append(c.getCapitalName()).append(" |\r\n");
         }
+
         try {
 //            new File("./reports/").mkdir();
 //            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./reports/" + filename)));
