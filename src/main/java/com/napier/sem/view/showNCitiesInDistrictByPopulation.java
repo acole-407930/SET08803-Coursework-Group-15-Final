@@ -3,11 +3,11 @@ package com.napier.sem.view;
 import com.napier.sem.model.City;
 import java.util.List;
 
-public class showtopNCitiesInRegionByPopulation {
+public class showNCitiesInDistrictByPopulation {
 
-    public void displayCities(List<City> cities, String regionName, int n) {
+    public void displayCities(List<City> cities, String districtName, int n) {
         System.out.println("==============================================================================================");
-        System.out.println(" TOP " + n + " MOST POPULATED CITIES IN " + regionName.toUpperCase());
+        System.out.println(" TOP " + n + " MOST POPULATED CITIES IN " + districtName.toUpperCase());
         System.out.println("==============================================================================================");
 
         System.out.printf("%-30s %-25s %-30s %15s%n",
@@ -15,7 +15,7 @@ public class showtopNCitiesInRegionByPopulation {
         System.out.println("----------------------------------------------------------------------------------------------");
 
         if (cities == null || cities.isEmpty()) {
-            System.out.println("No cities found for this region.");
+            System.out.println("No cities found for this district.");
             System.out.println("==============================================================================================");
             return;
         }
