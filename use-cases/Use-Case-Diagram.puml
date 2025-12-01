@@ -1,16 +1,18 @@
 ```mermaid
-flowchart TD
-    User["Authorized User / Data Analyst"] --> Country
-    User --> City
-    User --> Capital
-    User --> UrbanRural
-    User --> Language
+flowchart TB
+    User["Authorized User / Data Analyst"]
     
-    subgraph Reports["Population Reports"]
+    subgraph "Population Reports"
         Country["Country Population Reports"]
         City["City Population Reports"]
         Capital["Capital Population Reports"]
         UrbanRural["Urban & Rural Population Distribution"]
         Language["Language Population Reports"]
     end
+    
+    User --> Country
+    User --> City
+    User --> Capital
+    User --> UrbanRural
+    User --> Language
 ```
