@@ -27,7 +27,7 @@ public class Reportable {
             writer.write(sb.toString());
             writer.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            e.printStackTrace(); //test
         }
     }
 }
