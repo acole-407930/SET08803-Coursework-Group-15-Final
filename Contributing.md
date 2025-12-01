@@ -44,10 +44,14 @@ git clone https://github.com/<your-org-or-user>/SET08803-Coursework-Group-15-Fin
 ### **Project Structure Overview**
 
 ```
-src/main/java/com/napier/sem/   → application logic
-src/main/resources/             → configuration files
-src/test/java/                  → tests (if applicable)
-.github/workflows/              → CI/CD pipeline
+src/main/java/com/napier/sem/
+├── app/             → Application entry flow, menu routing, and startup logic
+├── controller/      → Controllers that connect repository data to the view layer for presentation
+├── model/           → Data models (e.g., City, Country, Region)
+├── repository/      → Database access layer (SQL queries, repository interfaces, implementations)
+├── util/            → Shared utilities (DB connections, helpers, formatting tools)
+├── view/            → Presentation layer responsible for formatting and displaying output/results
+
 ```
 
 ### **Build & Run**
