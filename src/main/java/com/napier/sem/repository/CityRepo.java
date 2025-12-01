@@ -17,4 +17,5 @@ public interface CityRepo {
     List<City> getNCitiesInNContinentByPopulation(String continentName, Integer topN);
 
     List<City> getNCitiesInRegionByPopulation(String regionName, Integer topN);
-}
+
+    List<City> getNCitiesInDistrictByPopulation(String districtName, Integer topN); }
