@@ -423,4 +423,30 @@ public class CityRepoImp implements CityRepo {
 
         return cities;
     }
+
+    @Override
+    public long getTotalPopulationOfCity(String cityName) {
+        long population = 0;
+
+        if (con == null || cityName == null || cityName.trim().isEmpty()) {
+            System.out.println("Invalid input or database connection.");
+            return population;
+        }
+
+        String sql = "SELECT Population FROM city WHERE Name = ?";
+
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setString(1, cityName);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                population = rs.getLong("Population");
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving city population: " + e.getMessage());
+        }
+
+        return population;
+    }
+
 }
