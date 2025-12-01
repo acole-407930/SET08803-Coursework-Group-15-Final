@@ -92,6 +92,10 @@ public class App {
         long totalPopulation = cityController.getTotalPopulationOfDistrict(districtName);
         districtPopView.displayTotalPopulation(districtName, totalPopulation);   // e.g. "Total Population of Rio de Janeiro: 1234567"
 
+        showCityPopulation cityPopView = new showCityPopulation();
+        cityPopView.displayCityPopulation("Tokyo", cityController.getTotalPopulationOfCity("Tokyo"));
+
+
 
         db.disconnect(con);
     }
