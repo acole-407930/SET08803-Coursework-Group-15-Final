@@ -171,6 +171,7 @@ public class CityRepoImp implements CityRepo {
         }
 
         return totalPopulation;
+    }
     // 3) TOP N MOST POPULATED CITIES IN A COUNTRY (NEW)
     // =========================================================
     @Override
