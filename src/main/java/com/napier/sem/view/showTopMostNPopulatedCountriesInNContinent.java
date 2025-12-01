@@ -24,15 +24,15 @@ public class showTopMostNPopulatedCountriesInNContinent {
             );
         }
 
-        Reportable r1 = new Reportable();
-
-        r1.toString();
+//        Reportable r1 = new Reportable();
+//
+//        r1.toString();
 
         //generate the .md report equivalent...
-        Reportable.generateReport(countries, "topNCountries.md");
+        //Reportable.generateReport(countries, "topNCountries.md");
 
         //reports/
-        Reportable.generateReport();
+        //Reportable.generateReport();
 
     }
 }
