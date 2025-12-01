@@ -20,7 +20,7 @@ public class Reportable {
         // Loop over all employees in the list
         for (Country c : countries) {
             if (c == null) continue;
-            sb.append("| ").append(c.getCode()).append(" | ").append(c.getName()).append(" | ").append(c.getContinent()).append(" | ").append(c.getRegion()).append(" | ").append(c.getPopulation()).append(" | ").append(c.getCapitalName()).append(" | ").append(" |\r\n");
+            sb.append("| ").append(c.getCode()).append(" | ").append(c.getName()).append(" | ").append(c.getContinent()).append(" | ").append(c.getRegion()).append(" | ").append(c.getPopulation()).append(" | ").append(c.getCapitalName()).append(" |\r\n");
         }
         try {
 //            new File("./reports/").mkdir();
