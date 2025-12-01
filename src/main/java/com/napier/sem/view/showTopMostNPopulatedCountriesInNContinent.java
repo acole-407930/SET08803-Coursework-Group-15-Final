@@ -1,6 +1,8 @@
 package com.napier.sem.view;
 
 import com.napier.sem.model.Country;
+import com.napier.sem.util.Reportable;
+
 import java.util.List;
 
 
@@ -21,6 +23,9 @@ public class showTopMostNPopulatedCountriesInNContinent {
                     c.getRegion(), c.getPopulation(), c.getCapitalName()
             );
         }
+
+        //generate the .md report equivalent...
+        Reportable.generateReport(countries, "Top " + N + " Most Populated Countries in " + continent);
     }
 }
 
