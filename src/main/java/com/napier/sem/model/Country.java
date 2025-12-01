@@ -7,15 +7,15 @@ public class Country {
     private String continent;
     private String region;
     private double surfaceArea;
-    private Integer indepYear;       // Nullable in SQL, so use Integer
+    private Integer indepYear;
     private int population;
-    private Double lifeExpectancy;   // Nullable, so use Double
-    private Double gnp;              // Nullable, so use Double
-    private Double gnpOld;           // Nullable, so use Double
+    private Double lifeExpectancy;
+    private Double gnp;
+    private Double gnpOld;
     private String localName;
     private String governmentForm;
     private String headOfState;
-    private Integer capital;         // Nullable, so use Integer
+    private Integer capital;
     private String capitalName;
     private String code2;
 
