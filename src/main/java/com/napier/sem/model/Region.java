@@ -1,14 +1,13 @@
 package com.napier.sem.model;
 
 public class Region {
-
-    private String regionName;
-    private String cityName;
-    private long totalCityPopulation;      // was int
-    private long urbanPopulation;          // was int
-    private double urbanPercentage;
-    private long nonUrbanPopulation;       // was int
-    private double nonUrbanPercentage;
+    private final String regionName;
+    private final String cityName;
+    private final long totalCityPopulation;
+    private final long urbanPopulation;
+    private final double urbanPercentage;
+    private final long nonUrbanPopulation;
+    private final double nonUrbanPercentage;
 
     public Region(String regionName,
                   String cityName,
