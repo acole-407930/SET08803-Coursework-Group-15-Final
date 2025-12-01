@@ -1,19 +1,16 @@
-```plantuml
-@startuml
-left to right direction
-
-actor "Authorized User / Data Analyst" as User
-
-usecase "Country Population Reports" as Country
-usecase "City Population Reports" as City
-usecase "Capital Population Reports" as Capital
-usecase "Urban & Rural Population Distribution" as UrbanRural
-usecase "Language Population Reports" as Language
-
-User --> Country
-User --> City
-User --> Capital
-User --> UrbanRural
-User --> Language
-@enduml
+```mermaid
+flowchart TD
+    User["Authorized User / Data Analyst"] --> Country
+    User --> City
+    User --> Capital
+    User --> UrbanRural
+    User --> Language
+    
+    subgraph Reports["Population Reports"]
+        Country["Country Population Reports"]
+        City["City Population Reports"]
+        Capital["Capital Population Reports"]
+        UrbanRural["Urban & Rural Population Distribution"]
+        Language["Language Population Reports"]
+    end
 ```
