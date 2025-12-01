@@ -23,4 +23,8 @@ public class CityController {
 
     public List<City> getTopNCitiesInCountryByPopulation(String countryName, int n) {return cityRepo.getTopNCitiesInCountryByPopulation(countryName, n);}
 
-    public List<City> getNCitiesInNContinentByPopulation(String continentName, int n) {return cityRepo.getNCitiesInNContinentByPopulation(continentName, n);} }
+    public List<City> getNCitiesInNContinentByPopulation(String continentName, int n) {return cityRepo.getNCitiesInNContinentByPopulation(continentName, n);}
+
+    public List<City> getNCitiesInRegionByPopulation(String regionName, Integer topN)  {return cityRepo.getNCitiesInRegionByPopulation(regionName, topN); }
+}
+
