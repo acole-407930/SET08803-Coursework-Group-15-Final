@@ -5,6 +5,10 @@ import com.napier.sem.repository.CityRepoImp;
 import com.napier.sem.util.DBConnection;
 import com.napier.sem.repository.CountryRepoImp;
 import com.napier.sem.controller.CountryController;
+import com.napier.sem.repository.RegionRepoImp;
+import com.napier.sem.controller.RegionController;
+import com.napier.sem.view.showRegionPopulationCityVsNonCity;
+
 
 //views
 import com.napier.sem.view.*;
@@ -54,6 +58,15 @@ public class App {
         //Issue #16 - Show Cities In Continent by Population
         showCitiesInContinentByPopulation citiesInContinentByPopulation = new showCitiesInContinentByPopulation(); // Issue #12
         citiesInContinentByPopulation.displayCities(cityController.getCitiesInContinentByPopulation("Asia"), "Asia");
+
+        //Issue #21
+        showNCitiesInNContinentByPopulation citiesInNContinentByPopulation = new showNCitiesInNContinentByPopulation();
+        citiesInNContinentByPopulation.displayCities(cityController.getNCitiesInNContinentByPopulation("Europe", 3),"Europe",3 ); // Add the missing 'n' parameter - number of cities to show);
+        RegionController regionController = new RegionController(new RegionRepoImp(con));
+        showRegionPopulationCityVsNonCity regionView = new showRegionPopulationCityVsNonCity();
+
+        regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
+
 
         db.disconnect(con);
     }
