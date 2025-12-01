@@ -80,7 +80,7 @@ public class App {
 
         regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
 
-        // Population Controller
+        // Population Controller - Issue #31
         PopulationController populationController = new PopulationController(new PopulationRepoImp(con));
 
         // Issue #31
