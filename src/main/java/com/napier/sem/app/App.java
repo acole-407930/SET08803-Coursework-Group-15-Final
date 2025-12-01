@@ -60,18 +60,24 @@ public class App {
         citiesInContinentByPopulation.displayCities(cityController.getCitiesInContinentByPopulation("Asia"), "Asia");
 
         //Issue #21
-        showNCitiesInNContinentByPopulation citiesInNContinentByPopulation = new showNCitiesInNContinentByPopulation();
-        citiesInNContinentByPopulation.displayCities(cityController.getNCitiesInNContinentByPopulation("Europe", 3),"Europe",3 );
+        //showNCitiesInNContinentByPopulation citiesInNContinentByPopulation = new showNCitiesInNContinentByPopulation();
+        //citiesInNContinentByPopulation.displayCities(cityController.getNCitiesInNContinentByPopulation("Europe", 3),"Europe",3 );
 
         // Issue #22
-        showtopNCitiesInRegionByPopulation citiesInRegionByPopulation = new showtopNCitiesInRegionByPopulation();
-        citiesInRegionByPopulation.displayCities(cityController.getNCitiesInRegionByPopulation("Caribbean", 3), "Caribbean", 3);
+        //showtopNCitiesInRegionByPopulation citiesInRegionByPopulation = new showtopNCitiesInRegionByPopulation();
+        //citiesInRegionByPopulation.displayCities(cityController.getNCitiesInRegionByPopulation("Caribbean", 3), "Caribbean", 3);
 
         // Region Controller
         RegionController regionController = new RegionController(new RegionRepoImp(con));
         showRegionPopulationCityVsNonCity regionView = new showRegionPopulationCityVsNonCity();
 
         regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
+
+        // ===== TOTAL POPULATION OF A COUNTRY =====
+        showTotalPopulationOfCountry countryPopView = new showTotalPopulationOfCountry();
+        String countryName = "Japan";
+        long countryPopulation = c_controller.getTotalPopulationOfCountry(countryName);
+        countryPopView.displayTotalPopulation(countryName, countryPopulation);
 
 
         db.disconnect(con);

@@ -159,4 +159,31 @@ public class CountryRepoImp implements CountryRepo {
 
         return countries;
     }
+    @Override
+    public long getTotalPopulationOfCountry(String countryName) {
+        if (countryName == null || countryName.trim().isEmpty()) {
+            System.out.println("Country name cannot be null or empty.");
+            return 0;
+        }
+
+        String sql = "SELECT Population FROM country WHERE Name = ?";
+
+        try (PreparedStatement pstmt = con.prepareStatement(sql)) {
+            pstmt.setString(1, countryName);
+            ResultSet rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                // Use getLong in case the value is large
+                return rs.getLong("Population");
+            } else {
+                System.out.println("No country found with name: " + countryName);
+                return 0;
+            }
+        } catch (SQLException e) {
+            System.out.println("Error fetching total population of country: " + e.getMessage());
+            return 0;
+        }
+    }
+
+
 }
