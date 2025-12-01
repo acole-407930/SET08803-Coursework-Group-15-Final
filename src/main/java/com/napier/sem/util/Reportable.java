@@ -23,8 +23,10 @@ public class Reportable {
             sb.append("| ").append(c.getCode()).append(" | ").append(c.getName()).append(" | ").append(c.getContinent()).append(" | ").append(c.getRegion()).append(" | ").append(c.getPopulation()).append(" | ").append(c.getCapitalName()).append(" | ").append(" |\r\n");
         }
         try {
-            new File("./reports/").mkdir();
-            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./reports/" + filename)));
+//            new File("./reports/").mkdir();
+//            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./reports/" + filename)));
+            new File("/app/reports").mkdirs();
+            BufferedWriter writer = new BufferedWriter(new FileWriter("/app/reports/" + filename));
             writer.write(sb.toString());
             writer.close();
         } catch (IOException e) {
