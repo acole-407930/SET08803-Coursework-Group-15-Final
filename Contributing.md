@@ -1,7 +1,7 @@
 # **Contributing Guide – Group 15 DevOps Coursework**
 
 Thank you for contributing to the Group 15 DevOps Coursework project.
-Our goal is to develop a clean, maintainable Population Reporting System using DevOps practices.
+Our goal is to develop a clean, maintainable World Population Analytics using DevOps practices.
 This guide outlines how to contribute effectively while maintaining consistency, code quality, and team alignment.
 
 Please review this document before submitting any changes.

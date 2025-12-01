@@ -42,23 +42,18 @@ The project deliverables are as follows:
 
 ## Team Members
 
-| Name | Student ID | Role |
-
-|------|-------------|------|
-
-| Sergio Pech | 40735258 | Scrum Master |
-
-| Aiden Coleman | 40733930 | Product Owner |
-
-| Rowan Bishop | 40740506 | Team Member |
-
-| Stephanie Kothdiwala | 40679664 | Team Member |
-
-| Zoe Villanueva | 40733245 | Team Member |
+| Name | Student ID | Role | Code Review 1 | Code Review 2 |
+|------|-------------|------| ---------- | --------- |
+| Sergio Pech | 40735258 | Scrum Master | 20 | 25 |
+| Aiden Coleman | 40733930 | Product Owner | 20 | 25 |
+| Rowan Bishop | 40740506 | Team Member | 20 | 12.5 |
+| Stephanie Kothdiwala | 40679664 | Team Member | 20 | 18.75 |
+| Zoe Villanueva | 40733245 | Team Member | 20 | 18.75 |
  
 ---
 
-Code Review 1 Contribution	Detail
+## Code Review 1 
+### Contribution	Detail
 
 40733930 - Aiden Coleman	Created and managed the project repository, ensuring proper version control and smooth integration of all team deliverables. Followed lab guidelines, troubleshot IntelliJ issues, and supported teammates throughout the workflow to ensure timely and accurate submissions.
 
@@ -71,6 +66,20 @@ Code Review 1 Contribution	Detail
 40733245 - Zoe Villanueva        	Set up and maintained the Project Board, Kanban, ReadMe, and Sprint Board based on finalized use cases and user stories. Delivered all components on time and kept communication open for revisions and updates. Demonstrated strong organization and reliability.
 
 
+## Code Review 2
+### Contribution	Detail
+
+40733930 - Aiden Coleman	Created and managed the project repository, ensuring proper version control and smooth integration of team deliverables. Coordinated with the Scrum Master and team, scheduled brief training sessions to resolve issues, and supported successful integration testing and deployment.				
+
+40679664 - Stephanie Kothdiwala	Updated project use cases and user stories to ensure clarity and alignment with requirements. Developed a team Code of Conduct to promote collaboration and accountability, and generated assigned reports.				
+
+40735258 - Sergio Pech        	Collaborated with the Product Owner, assisted in training team members, completed all assigned issues, and worked closely on resolving repository errors and implementing code fixes.				
+
+40740506 - Rowan Bishop	create a use case diagram and generate assigned issues				
+
+40733245 - Zoe Villanueva        	Collaborated on refining the repository’s .md files, supported lab faithfulness by aligning work with the labs and rubric, scheduled meetings accordingly, created issues and managed the Zube.io Kanban board, and completed all assigned tasks.
+
+---
 * Master Build ![Master Build](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15-Final/main.yml?branch=master&label=Master%20Build)
 
 * Develop Branch Status ![GitHub Workflow Status (branch)](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15-Final/main.yml?branch=master)
