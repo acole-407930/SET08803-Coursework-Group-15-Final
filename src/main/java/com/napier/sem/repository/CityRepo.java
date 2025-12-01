@@ -21,6 +21,8 @@ public interface CityRepo {
     List<City> getNCitiesInRegionByPopulation(String regionName, Integer topN);
 
     List<City> getNCitiesInDistrictByPopulation(String districtName, Integer topN);
+
+    long getTotalPopulationOfCity(String cityName);
 }
 
 
