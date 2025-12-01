@@ -1,1 +1,17 @@
-![Population Reports Diagram](https://www.plantuml.com/plantuml/svg/SoWkIImgAStDuG8oIb8Ld1BICmjoIyn9B2vMgEPI00nCL110)
+@startuml
+left to right direction
+
+actor "Authorized User / Data Analyst" as User
+
+usecase "Country Population Reports" as Country
+usecase "City Population Reports" as City
+usecase "Capital Population Reports" as Capital
+usecase "Urban & Rural Population Distribution" as UrbanRural
+usecase "Language Population Reports" as Language
+
+User --> Country
+User --> City
+User --> Capital
+User --> UrbanRural
+User --> Language
+@enduml
