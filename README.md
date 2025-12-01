@@ -54,183 +54,41 @@ The project deliverables are as follows:
  
 ---
 
-Code Review 1 Contribution	Detail
-
-40733930 - Aiden Coleman	Created and managed the project repository, ensuring proper version control and smooth integration of all team deliverables. Followed lab guidelines, troubleshot IntelliJ issues, and supported teammates throughout the workflow to ensure timely and accurate submissions.
-
-40679664 - Stephanie Kothdiwala	Developed use cases, user stories, and the project’s code of conduct. Maintained consistent attendance and clear communication. Completed assigned labs on time and contributed effectively to the group’s progress and coordination.
-
-40735258 - Sergio Pech        	Served as Scrum Master, keeping the team on schedule and accountable. Created a backup repository, coordinated closely with the Product Owner, and maintained regular communication through meetings and check-ins. Ensured smooth collaboration and steady project progress.
-
-40740506 - Rowan Bishop	Created and refined the Use Case Diagram, aligning it with project requirements. Organized GitHub issues to track tasks and bugs, ensuring structure and visibility. Attended all meetings and supported workflow consistency through timely and accurate delivery.
-
-40733245 - Zoe Villanueva        	Set up and maintained the Project Board, Kanban, ReadMe, and Sprint Board based on finalized use cases and user stories. Delivered all components on time and kept communication open for revisions and updates. Demonstrated strong organization and reliability.
-
 # Country and City Population Reports
 
-## 1. Country Reports
+## Complete Requirements Table
 
-### 1.1 All the countries in the world organised by largest population to smallest.
-- **ID:** 1
-- **Name of the requirement:** Countries by population (world)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 1.2 All the countries in a continent organised by largest population to smallest.
-- **ID:** 2
-- **Name of the requirement:** Countries by population (continent)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 1.3 All the countries in a region organised by largest population to smallest.
-- **ID:** 3
-- **Name of the requirement:** Countries by population (region)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 1.4 The top N populated countries in the world where N is provided by the user.
-- **ID:** 4
-- **Name of the requirement:** Top N countries by population (world)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 1.5 The top N populated countries in a continent where N is provided by the user.
-- **ID:** 5
-- **Name of the requirement:** Top N countries by population (continent)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 1.6 The top N populated countries in a region where N is provided by the user.
-- **ID:** 6
-- **Name of the requirement:** Top N countries by population (region)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
----
-
-## 2. City Reports
-
-### 2.1 All the cities in the world organised by largest population to smallest.
-- **ID:** 7
-- **Name of the requirement:** Cities by population (world)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.2 All the cities in a continent organised by largest population to smallest.
-- **ID:** 8
-- **Name of the requirement:** Cities by population (continent)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.3 All the cities in a region organised by largest population to smallest.
-- **ID:** 9
-- **Name of the requirement:** Cities by population (region)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.4 All the cities in a country organised by largest population to smallest.
-- **ID:** 10
-- **Name of the requirement:** Cities by population (country)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.5 All the cities in a district organised by largest population to smallest.
-- **ID:** 11
-- **Name of the requirement:** Cities by population (district)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.6 The top N populated cities in the world where N is provided by the user.
-- **ID:** 12
-- **Name of the requirement:** Top N cities by population (world)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.7 The top N populated cities in a continent where N is provided by the user.
-- **ID:** 13
-- **Name of the requirement:** Top N cities by population (continent)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.8 The top N populated cities in a region where N is provided by the user.
-- **ID:** 14
-- **Name of the requirement:** Top N cities by population (region)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.9 The top N populated cities in a country where N is provided by the user.
-- **ID:** 15
-- **Name of the requirement:** Top N cities by population (country)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 2.10 The top N populated cities in a district where N is provided by the user.
-- **ID:** 16
-- **Name of the requirement:** Top N cities by population (district)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
----
-
-## 3. Capital City Reports
-
-### 3.1 All the capital cities in the world organised by largest population to smallest.
-- **ID:** 17
-- **Name of the requirement:** Capital cities by population (world)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 3.2 All the capital cities in a continent organised by largest population to smallest.
-- **ID:** 18
-- **Name of the requirement:** Capital cities by population (continent)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 3.3 All the capital cities in a region organised by largest to smallest.
-- **ID:** 19
-- **Name of the requirement:** Capital cities by population (region)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 3.4 The top N populated capital cities in the world where N is provided by the user.
-- **ID:** 20
-- **Name of the requirement:** Top N capital cities by population (world)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 3.5 The top N populated capital cities in a continent where N is provided by the user.
-- **ID:** 21
-- **Name of the requirement:** Top N capital cities by population (continent)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 3.6 The top N populated capital cities in a region where N is provided by the user.
-- **ID:** 22
-- **Name of the requirement:** Top N capital cities by population (region)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
----
-
-## 4. Population Reports
-
-### 4.1 The population of people, people living in cities, and people not living in cities in each continent.
-- **ID:** 23
-- **Name of the requirement:** Population statistics (continent)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 4.2 The population of people, people living in cities, and people not living in cities in each region.
-- **ID:** 24
-- **Name of the requirement:** Population statistics (region)
-- **Has the requirement been met:** No
-- **Screenshot:** 
-
-### 4.3 The population of people, people living in cities, and people not living in cities in each country.
-- **ID:** 25
-- **Name of the requirement:** Population statistics (country)
-- **Has the requirement been met:** No
-- **Screenshot:** 
+| ID | Requirement Name | Status | Screenshot |
+|----|------------------|--------|------------|
+| **1. Country Reports** |
+| 1 | All the countries in the world organised by largest population to smallest. | No | |
+| 2 | All the countries in a continent organised by largest population to smallest. | No | |
+| 3 | All the countries in a region organised by largest population to smallest. | No | |
+| 4 | The top N populated countries in the world where N is provided by the user. | No | |
+| 5 | The top N populated countries in a continent where N is provided by the user. | No | |
+| 6 | The top N populated countries in a region where N is provided by the user. | No | |
+| **2. City Reports** |
+| 7 | All the cities in the world organised by largest population to smallest. | No | |
+| 8 | All the cities in a continent organised by largest population to smallest. | No | |
+| 9 | All the cities in a region organised by largest population to smallest. | No | |
+| 10 | All the cities in a country organised by largest population to smallest. | No | |
+| 11 | All the cities in a district organised by largest population to smallest. | No | |
+| 12 | The top N populated cities in the world where N is provided by the user. | No | |
+| 13 | The top N populated cities in a continent where N is provided by the user. | No | |
+| 14 | The top N populated cities in a region where N is provided by the user. | No | |
+| 15 | The top N populated cities in a country where N is provided by the user. | No | |
+| 16 | The top N populated cities in a district where N is provided by the user. | No | |
+| **3. Capital City Reports** |
+| 17 | All the capital cities in the world organised by largest population to smallest. | No | |
+| 18 | All the capital cities in a continent organised by largest population to smallest. | No | |
+| 19 | All the capital cities in a region organised by largest to smallest. | No | |
+| 20 | The top N populated capital cities in the world where N is provided by the user. | No | |
+| 21 | The top N populated capital cities in a continent where N is provided by the user. | No | |
+| 22 | The top N populated capital cities in a region where N is provided by the user. | No | |
+| **4. Population Reports** |
+| 23 | The population of people, people living in cities, and people not living in cities in each continent. | No | |
+| 24 | The population of people, people living in cities, and people not living in cities in each region. | No | |
+| 25 | The population of people, people living in cities, and people not living in cities in each country. | No | |
 
 
 
