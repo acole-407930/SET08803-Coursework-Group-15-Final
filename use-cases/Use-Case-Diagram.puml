@@ -1,9 +1,19 @@
-flowchart TD
-    subgraph User["Authorized User / Data Analyst"]
-    end
-    
-    User --> Country["Country Population Reports"]
-    User --> City["City Population Reports"]
-    User --> Capital["Capital Population Reports"]
-    User --> UrbanRural["Urban & Rural Population Distribution"]
-    User --> Language["Language Population Reports"]
+```plantuml
+@startuml
+left to right direction
+
+actor "Authorized User / Data Analyst" as User
+
+usecase "Country Population Reports" as Country
+usecase "City Population Reports" as City
+usecase "Capital Population Reports" as Capital
+usecase "Urban & Rural Population Distribution" as UrbanRural
+usecase "Language Population Reports" as Language
+
+User --> Country
+User --> City
+User --> Capital
+User --> UrbanRural
+User --> Language
+@enduml
+```
