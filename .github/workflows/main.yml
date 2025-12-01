@@ -84,7 +84,7 @@ jobs:
       - name: List containers
         run: docker ps -a
       - name: Copy Output
-        run: docker container cp set08803-coursework-group-15-final-db-1:./reports ./
+        run: docker container cp set08803-coursework-group-15-final-app-1:/app/reports ./reports
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.5
         with:
