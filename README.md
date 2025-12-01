@@ -66,6 +66,178 @@ Code Review 1 Contribution	Detail
 
 40733245 - Zoe Villanueva        	Set up and maintained the Project Board, Kanban, ReadMe, and Sprint Board based on finalized use cases and user stories. Delivered all components on time and kept communication open for revisions and updates. Demonstrated strong organization and reliability.
 
+# Country and City Population Reports
+
+## 1. Country Reports
+
+### 1.1 All the countries in the world organised by largest population to smallest.
+- **ID:** 1
+- **Name of the requirement:** Countries by population (world)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 1.2 All the countries in a continent organised by largest population to smallest.
+- **ID:** 2
+- **Name of the requirement:** Countries by population (continent)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 1.3 All the countries in a region organised by largest population to smallest.
+- **ID:** 3
+- **Name of the requirement:** Countries by population (region)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 1.4 The top N populated countries in the world where N is provided by the user.
+- **ID:** 4
+- **Name of the requirement:** Top N countries by population (world)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 1.5 The top N populated countries in a continent where N is provided by the user.
+- **ID:** 5
+- **Name of the requirement:** Top N countries by population (continent)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 1.6 The top N populated countries in a region where N is provided by the user.
+- **ID:** 6
+- **Name of the requirement:** Top N countries by population (region)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+---
+
+## 2. City Reports
+
+### 2.1 All the cities in the world organised by largest population to smallest.
+- **ID:** 7
+- **Name of the requirement:** Cities by population (world)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.2 All the cities in a continent organised by largest population to smallest.
+- **ID:** 8
+- **Name of the requirement:** Cities by population (continent)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.3 All the cities in a region organised by largest population to smallest.
+- **ID:** 9
+- **Name of the requirement:** Cities by population (region)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.4 All the cities in a country organised by largest population to smallest.
+- **ID:** 10
+- **Name of the requirement:** Cities by population (country)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.5 All the cities in a district organised by largest population to smallest.
+- **ID:** 11
+- **Name of the requirement:** Cities by population (district)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.6 The top N populated cities in the world where N is provided by the user.
+- **ID:** 12
+- **Name of the requirement:** Top N cities by population (world)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.7 The top N populated cities in a continent where N is provided by the user.
+- **ID:** 13
+- **Name of the requirement:** Top N cities by population (continent)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.8 The top N populated cities in a region where N is provided by the user.
+- **ID:** 14
+- **Name of the requirement:** Top N cities by population (region)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.9 The top N populated cities in a country where N is provided by the user.
+- **ID:** 15
+- **Name of the requirement:** Top N cities by population (country)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 2.10 The top N populated cities in a district where N is provided by the user.
+- **ID:** 16
+- **Name of the requirement:** Top N cities by population (district)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+---
+
+## 3. Capital City Reports
+
+### 3.1 All the capital cities in the world organised by largest population to smallest.
+- **ID:** 17
+- **Name of the requirement:** Capital cities by population (world)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 3.2 All the capital cities in a continent organised by largest population to smallest.
+- **ID:** 18
+- **Name of the requirement:** Capital cities by population (continent)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 3.3 All the capital cities in a region organised by largest to smallest.
+- **ID:** 19
+- **Name of the requirement:** Capital cities by population (region)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 3.4 The top N populated capital cities in the world where N is provided by the user.
+- **ID:** 20
+- **Name of the requirement:** Top N capital cities by population (world)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 3.5 The top N populated capital cities in a continent where N is provided by the user.
+- **ID:** 21
+- **Name of the requirement:** Top N capital cities by population (continent)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 3.6 The top N populated capital cities in a region where N is provided by the user.
+- **ID:** 22
+- **Name of the requirement:** Top N capital cities by population (region)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+---
+
+## 4. Population Reports
+
+### 4.1 The population of people, people living in cities, and people not living in cities in each continent.
+- **ID:** 23
+- **Name of the requirement:** Population statistics (continent)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 4.2 The population of people, people living in cities, and people not living in cities in each region.
+- **ID:** 24
+- **Name of the requirement:** Population statistics (region)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+### 4.3 The population of people, people living in cities, and people not living in cities in each country.
+- **ID:** 25
+- **Name of the requirement:** Population statistics (country)
+- **Has the requirement been met:** No
+- **Screenshot:** 
+
+
+
+
+
+
+
 
 * Master Build ![Master Build](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15-Final/main.yml?branch=master&label=Master%20Build)
 
