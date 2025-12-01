@@ -11,6 +11,5 @@ public interface CountryRepo
     List<Country> getTopNMostPopulatedCountries(int N);
     List<Country> getTopNCountriesInRegionByPopulation(String regionName, int n);
     List<Country> getTopMostNPopulatedCountriesInNContinent(int N, String continent);
-
+    long getTotalPopulationOfCountry(String countryName);
 }
-
