@@ -290,5 +290,58 @@ public class CityRepoImp implements CityRepo {
         return cities;
     }
 
+    @Override
+    public List<City> getNCitiesInRegionByPopulation(String regionName, Integer topN) {
+        List<City> cities = new ArrayList<>();
+
+        if (con == null) {
+            System.out.println("Database connection is null.");
+            return cities;
+        }
+
+        if (regionName == null || regionName.trim().isEmpty()) {
+            System.out.println("Region name cannot be null or empty.");
+            return cities;
+        }
+
+        StringBuilder sql = new StringBuilder(
+                "SELECT ci.ID, ci.Name AS CityName, ci.CountryCode, co.Name AS CountryName, " +
+                        "ci.District, ci.Population " +
+                        "FROM city ci " +
+                        "JOIN country co ON ci.CountryCode = co.Code " +
+                        "WHERE co.Region = ? " +
+                        "ORDER BY ci.Population DESC, CityName ASC");
+
+        // Add LIMIT clause if topN is provided
+        if (topN != null && topN > 0) {
+            sql.append(" LIMIT ?");
+        }
+
+        try (PreparedStatement stmt = con.prepareStatement(sql.toString())) {
+            stmt.setString(1, regionName.trim());
+
+            if (topN != null && topN > 0) {
+                stmt.setInt(2, topN);
+            }
+
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                City city = new City(
+                        rs.getInt("ID"),
+                        rs.getString("CityName"),
+                        rs.getString("CountryCode"),
+                        rs.getString("CountryName"),
+                        rs.getString("District"),
+                        rs.getInt("Population")
+                );
+                cities.add(city);
+            }
+        } catch (SQLException e) {
+            System.out.println("Error retrieving cities in region by population: " + e.getMessage());
+        }
+
+        return cities;
+    }
+
 
 }
