@@ -95,6 +95,8 @@ public class App {
         showCityPopulation cityPopView = new showCityPopulation();
         cityPopView.displayCityPopulation("Tokyo", cityController.getTotalPopulationOfCity("Tokyo"));
 
+        showCountryPopulation countryPopView = new showCountryPopulation();
+        countryPopView.displayCountryPopulation("Belize", c_controller.getTotalPopulationOfCountry("Belize"));
 
 
         db.disconnect(con);
