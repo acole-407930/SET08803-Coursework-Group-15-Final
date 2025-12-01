@@ -5,6 +5,10 @@ import com.napier.sem.repository.CityRepoImp;
 import com.napier.sem.util.DBConnection;
 import com.napier.sem.repository.CountryRepoImp;
 import com.napier.sem.controller.CountryController;
+import com.napier.sem.repository.RegionRepoImp;
+import com.napier.sem.controller.RegionController;
+import com.napier.sem.view.showRegionPopulationCityVsNonCity;
+
 
 //views
 import com.napier.sem.view.*;
@@ -50,6 +54,12 @@ public class App {
 
         showtopNCitiesInCountryByPopulation topCitiesInCountryView = new showtopNCitiesInCountryByPopulation();
         topCitiesInCountryView.displayCities(cityController.getTopNCitiesInCountryByPopulation("Myanmar", 10), "Myanmar", 10);
+
+
+        RegionController regionController = new RegionController(new RegionRepoImp(con));
+        showRegionPopulationCityVsNonCity regionView = new showRegionPopulationCityVsNonCity();
+
+        regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
 
 
         db.disconnect(con);
