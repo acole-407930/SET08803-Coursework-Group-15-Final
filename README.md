@@ -58,6 +58,8 @@ The project deliverables are as follows:
 
 ## Complete Requirements Table (32 Reports)
 
+20 requirements of 32 have been implemented, which is 62.5%
+
 | ID | Requirement Name | Status | Screenshot |
 |----|------------------|--------|------------|
 | **1. Country Reports** |
