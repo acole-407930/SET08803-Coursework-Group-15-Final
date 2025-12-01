@@ -1,7 +1,9 @@
 package com.napier.sem.app;
 
 import com.napier.sem.controller.CityController;
+import com.napier.sem.controller.PopulationController;
 import com.napier.sem.repository.CityRepoImp;
+import com.napier.sem.repository.PopulationRepoImp;
 import com.napier.sem.util.DBConnection;
 import com.napier.sem.repository.CountryRepoImp;
 import com.napier.sem.controller.CountryController;
@@ -78,6 +80,12 @@ public class App {
 
         regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
 
+        // Population Controller
+        PopulationController populationController = new PopulationController(new PopulationRepoImp(con));
+
+        // Issue #31
+        showPopulationByContinentStats populationByContinentStats = new showPopulationByContinentStats();
+        populationByContinentStats.displayPopulationStats(populationController.getPopulationByContinentStats());
 
         db.disconnect(con);
     }
