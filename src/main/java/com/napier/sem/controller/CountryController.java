@@ -25,4 +25,7 @@ public class CountryController
     public List<Country> getTopNCountriesInRegionByPopulation(String regionName, int n) {return countryRepo.getTopNCountriesInRegionByPopulation(regionName, n);}
 
     public List<Country> getTopMostNPopulatedCountriesInNContinent(int N, String continent) {return countryRepo.getTopMostNPopulatedCountriesInNContinent(N, continent);}
+
+    public long getTotalPopulationOfCountry(String countryName) {return countryRepo.getTotalPopulationOfCountry(countryName);}
+
 }
