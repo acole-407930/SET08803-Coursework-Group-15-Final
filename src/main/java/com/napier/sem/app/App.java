@@ -59,6 +59,9 @@ public class App {
         showCitiesInContinentByPopulation citiesInContinentByPopulation = new showCitiesInContinentByPopulation(); // Issue #12
         citiesInContinentByPopulation.displayCities(cityController.getCitiesInContinentByPopulation("Asia"), "Asia");
 
+        //Issue #21
+        showNCitiesInNContinentByPopulation citiesInNContinentByPopulation = new showNCitiesInNContinentByPopulation();
+        citiesInNContinentByPopulation.displayCities(cityController.getNCitiesInNContinentByPopulation("Europe", 3),"Europe",3 ); // Add the missing 'n' parameter - number of cities to show);
         RegionController regionController = new RegionController(new RegionRepoImp(con));
         showRegionPopulationCityVsNonCity regionView = new showRegionPopulationCityVsNonCity();
 
