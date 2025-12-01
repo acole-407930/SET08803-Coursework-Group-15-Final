@@ -17,8 +17,17 @@ public class CityController {
 
     public List<City> getTopNMostPopulatedCitiesInWorld(int n) {return cityRepo.getTopNMostPopulatedCitiesInWorld(n);}
 
+    public long getTotalPopulationOfDistrict(String districtName) {return cityRepo.getTotalPopulationOfDistrict(districtName);
+    }
     public List<City> getCitiesInContinentByPopulation(String continentName) {return cityRepo.getCitiesInContinentByPopulation(continentName);}
 
     public List<City> getTopNCitiesInCountryByPopulation(String countryName, int n) {return cityRepo.getTopNCitiesInCountryByPopulation(countryName, n);}
 
-}
+    public List<City> getNCitiesInNContinentByPopulation(String continentName, int n) {return cityRepo.getNCitiesInNContinentByPopulation(continentName, n);}
+
+    public List<City> getNCitiesInRegionByPopulation(String regionName, Integer topN)  {return cityRepo.getNCitiesInRegionByPopulation(regionName, topN); }
+
+    public List<City> getNCitiesInDistrictByPopulation(String districtName, Integer topN) {return cityRepo.getNCitiesInDistrictByPopulation(districtName,topN); }
+
+    }
+
