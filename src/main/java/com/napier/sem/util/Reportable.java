@@ -45,9 +45,9 @@ public class Reportable {
 
         // Table Headers
         sb.append("| City | Country | District | Population |\r\n");
-        sb.append("| ---  | ---  | ---    | ---------: |\r\n");
+        sb.append("| ---  | ---     | ---      | ----------:|\r\n");
 
-        // Table Rows
+        // Data rows
         for (City c : cities) {
             if (c == null) continue;
             sb.append("| ")
