@@ -152,6 +152,8 @@ The project deliverables are as follows:
 
 * Release [![Release](https://img.shields.io/github/release/acole-407930/SET08803-Coursework-Group-15-Final/all.svg?style=flat-square&label=Release)](https://github.com/acole-407930/SET08803-Coursework-Group-15-Final/releases)
 
-  Zube | Agile project management with a seamless GitHub integration
-  Zube lets the product team work alongside the developers. The GitHub integration always keeps developer issues up to date.
+* [![codecov](https://codecov.io/gh/acole-407930/SET08803-Coursework-Group-15/graph/badge.svg?token=OAULO1R7Y3)](https://codecov.io/gh/acole-407930/SET08803-Coursework-Group-15)
+
+ Zube | Agile project management with a seamless GitHub integration
+ Zube lets the product team work alongside the developers. The GitHub integration always keeps developer issues up to date.
  
