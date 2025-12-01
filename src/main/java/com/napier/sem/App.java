@@ -1,7 +1,6 @@
 package com.napier.sem;
 
 import java.sql.*;
-import java.util.logging.Logger;
 
 public class App
 {
@@ -10,7 +9,6 @@ public class App
      */
     private Connection con = null;
 
-    Logger log = Logger.getLogger(App.class.getName());
     /**
      * Connect to the MySQL database.
      */
@@ -23,7 +21,7 @@ public class App
         }
         catch (ClassNotFoundException e)
         {
-            log.fine("Could not load SQL driver");
+            System.out.println("Could not load SQL driver");
             System.exit(-1);
         }
 
