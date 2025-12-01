@@ -1,5 +1,6 @@
 package com.napier.sem.util;
 
+import com.napier.sem.model.City;
 import com.napier.sem.model.Country;
 
 import java.io.BufferedWriter;
@@ -9,7 +10,7 @@ import java.io.IOException;
 import java.util.List;
 
 public class Reportable {
-    public static void generateReport(List<Country> countries, String filename){
+    public static void generateCountryReports(List<Country> countries, String filename){
 
         StringBuilder sb = new StringBuilder();
 
@@ -29,5 +30,9 @@ public class Reportable {
         } catch (IOException e) {
             e.printStackTrace(); //test
         }
+    }
+
+    public static void generateCitiesReport(List<City> cities, String filename){
+
     }
 }
