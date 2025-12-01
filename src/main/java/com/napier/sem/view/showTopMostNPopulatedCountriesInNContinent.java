@@ -24,15 +24,8 @@ public class showTopMostNPopulatedCountriesInNContinent {
             );
         }
 
-//        Reportable r1 = new Reportable();
-//
-//        r1.toString();
-
         //generate the .md report equivalent...
-        Reportable.generateCountryReports(countries, "topNCountries.md");
-
-        //reports/
-        //Reportable.generateReport();
+        Reportable.generateCountryReports(countries, "topNMostPopulatedCountriesInContinent.md");
 
     }
 }

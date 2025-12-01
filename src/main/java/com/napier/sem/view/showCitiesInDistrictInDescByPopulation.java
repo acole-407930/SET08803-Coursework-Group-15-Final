@@ -1,6 +1,8 @@
 package com.napier.sem.view;
 
 import com.napier.sem.model.City;
+import com.napier.sem.util.Reportable;
+
 import java.util.List;
 
 public class showCitiesInDistrictInDescByPopulation {
@@ -29,5 +31,7 @@ public class showCitiesInDistrictInDescByPopulation {
         }
 
         System.out.println("========================================================");
+
+        Reportable.generateCitiesReport(cities, "citiesPopulationInDistrictDesc");
     }
 }

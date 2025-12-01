@@ -31,8 +31,6 @@ public class Reportable {
         }
 
         try {
-//            new File("./reports/").mkdir();
-//            BufferedWriter writer = new BufferedWriter(new FileWriter(new File("./reports/" + filename)));
             new File("/app/reports").mkdirs();
             BufferedWriter writer = new BufferedWriter(new FileWriter("/app/reports/" + filename));
             writer.write(sb.toString());
@@ -43,6 +41,29 @@ public class Reportable {
     }
 
     public static void generateCitiesReport(List<City> cities, String filename){
+        StringBuilder sb = new StringBuilder();
 
+        // Table Headers
+        sb.append("| City | Country | District | Population |\r\n");
+        sb.append("| ---  | ---  | ---    | ---------: |\r\n");
+
+        // Table Rows
+        for (City c : cities) {
+            if (c == null) continue;
+            sb.append("| ")
+                    .append(c.getName()).append(" | ")
+                    .append(c.getCountryName()).append(" | ")
+                    .append(c.getDistrict()).append(" | ")
+                    .append(String.format("%,d", c.getPopulation())).append(" |\r\n");
+        }
+
+        try {
+            new File("/app/reports").mkdirs();
+            BufferedWriter writer = new BufferedWriter(new FileWriter("/app/reports/" + filename));
+            writer.write(sb.toString());
+            writer.close();
+        } catch (IOException e) {
+            e.printStackTrace(); //test
+        }
     }
 }
