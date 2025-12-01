@@ -1,7 +1,9 @@
 package com.napier.sem.app;
 
 import com.napier.sem.controller.CityController;
+import com.napier.sem.controller.PopulationController;
 import com.napier.sem.repository.CityRepoImp;
+import com.napier.sem.repository.PopulationRepoImp;
 import com.napier.sem.util.DBConnection;
 import com.napier.sem.repository.CountryRepoImp;
 import com.napier.sem.controller.CountryController;
@@ -55,17 +57,40 @@ public class App {
         showtopNCitiesInCountryByPopulation topCitiesInCountryView = new showtopNCitiesInCountryByPopulation();
         topCitiesInCountryView.displayCities(cityController.getTopNCitiesInCountryByPopulation("Myanmar", 10), "Myanmar", 10);
 
-        //Issue #16 - Show Cities In Continent by Population
+        //ISSUE #16 - Show Cities In Continent by Population
         showCitiesInContinentByPopulation citiesInContinentByPopulation = new showCitiesInContinentByPopulation(); // Issue #12
         citiesInContinentByPopulation.displayCities(cityController.getCitiesInContinentByPopulation("Asia"), "Asia");
 
         //Issue #21
         showNCitiesInNContinentByPopulation citiesInNContinentByPopulation = new showNCitiesInNContinentByPopulation();
-        citiesInNContinentByPopulation.displayCities(cityController.getNCitiesInNContinentByPopulation("Europe", 3),"Europe",3 ); // Add the missing 'n' parameter - number of cities to show);
+        citiesInNContinentByPopulation.displayCities(cityController.getNCitiesInNContinentByPopulation("Europe", 3),"Europe",3 );
+
+        // Issue #22
+        showtopNCitiesInRegionByPopulation citiesInRegionByPopulation = new showtopNCitiesInRegionByPopulation();
+        citiesInRegionByPopulation.displayCities(cityController.getNCitiesInRegionByPopulation("Caribbean", 3), "Caribbean", 3);
+
+        //Issue #24
+        showNCitiesInDistrictByPopulation citiesInDistrictByPopulation = new showNCitiesInDistrictByPopulation();
+        citiesInDistrictByPopulation.displayCities(cityController.getNCitiesInDistrictByPopulation("California", 5), "California", 5);
+
+
+        // Region Controller
         RegionController regionController = new RegionController(new RegionRepoImp(con));
         showRegionPopulationCityVsNonCity regionView = new showRegionPopulationCityVsNonCity();
 
         regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
+
+        // Population Controller - Issue #31
+        PopulationController populationController = new PopulationController(new PopulationRepoImp(con));
+
+        // Issue #31
+        showPopulationByContinentStats populationByContinentStats = new showPopulationByContinentStats();
+        populationByContinentStats.displayPopulationStats(populationController.getPopulationByContinentStats());
+        // ===== TOTAL POPULATION OF A DISTRICT =====
+        showTotalPopulationOfDistrict districtPopView = new showTotalPopulationOfDistrict();
+        String districtName = "Rio de Janeiro";   // the analyst's chosen district
+        long totalPopulation = cityController.getTotalPopulationOfDistrict(districtName);
+        districtPopView.displayTotalPopulation(districtName, totalPopulation);   // e.g. "Total Population of Rio de Janeiro: 1234567"
 
 
         db.disconnect(con);

@@ -26,7 +26,6 @@ jobs:
           directory: ./target/site/jacoco
           flags: Unit Tests # optional
           verbose: true # optional (default = false)
-
   IntegrationTests:
     name: Integration Tests
     runs-on: ubuntu-22.04
@@ -78,4 +77,12 @@ jobs:
           prerelease: false
           automatic_release_tag: "latest"
           files: |
-            ./target/*.jar
+            ./target/*.jar            
+      - name: Copy Output
+        run: docker container cp devops_country_reports_app_1:./tmp/reports ./
+
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.5
+        with:
+          branch: reports   # The branch the action should deploy to.
+          folder: reports 
