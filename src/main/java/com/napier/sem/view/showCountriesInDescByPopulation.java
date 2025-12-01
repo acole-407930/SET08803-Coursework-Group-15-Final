@@ -1,6 +1,8 @@
 package com.napier.sem.view;
 
 import com.napier.sem.model.Country;
+import com.napier.sem.util.Reportable;
+
 import java.util.List;
 
 public class showCountriesInDescByPopulation {
@@ -43,5 +45,7 @@ public class showCountriesInDescByPopulation {
 
         System.out.println("-----------------------------------------------------------------------------------------------------" +
                 "-------------------------------\n");
+
+        Reportable.generateCountryReports(countries, "countriesPopulationDesc.md");
     }
 }

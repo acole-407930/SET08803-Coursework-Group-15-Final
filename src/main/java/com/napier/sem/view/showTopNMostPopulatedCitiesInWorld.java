@@ -1,6 +1,8 @@
 package com.napier.sem.view;
 
 import com.napier.sem.model.City;
+import com.napier.sem.util.Reportable;
+
 import java.util.List;
 
 public class showTopNMostPopulatedCitiesInWorld {
@@ -30,5 +32,7 @@ public class showTopNMostPopulatedCitiesInWorld {
         }
 
         System.out.println("==============================================================================================");
+
+        Reportable.generateCitiesReport(cities, "topNMostPopulatedCitiesInWorld");
     }
 }

@@ -1,6 +1,8 @@
 package com.napier.sem.view;
 
 import com.napier.sem.model.Country;
+import com.napier.sem.util.Reportable;
+
 import java.util.List;
 
 public class showTopNCountriesInRegionByPopulation {
@@ -32,5 +34,7 @@ public class showTopNCountriesInRegionByPopulation {
         }
 
         System.out.println("==============================================================================================");
+
+        Reportable.generateCountryReports(countries, "topNMostPopulatedCountriesInRegion.md");
     }
 }
