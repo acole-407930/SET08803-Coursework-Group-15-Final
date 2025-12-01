@@ -145,6 +145,32 @@ public class CityRepoImp implements CityRepo {
     }
 
     // =========================================================
+    //  38) Total Population of a District
+    // =========================================================
+    @Override
+    public long getTotalPopulationOfDistrict(String districtName) {
+        long totalPopulation = 0;
+
+        if (con == null || districtName == null || districtName.trim().isEmpty()) {
+            System.out.println("Invalid input or database connection.");
+            return 0;
+        }
+
+        String sql = "SELECT SUM(Population) AS TotalPop FROM city WHERE District = ?";
+
+        try (PreparedStatement stmt = con.prepareStatement(sql)) {
+            stmt.setString(1, districtName);
+            ResultSet rs = stmt.executeQuery();
+
+            if (rs.next()) {
+                totalPopulation = rs.getLong("TotalPop");
+            }
+
+        } catch (SQLException e) {
+            System.out.println("Error retrieving total population of district: " + e.getMessage());
+        }
+
+        return totalPopulation;
     // 3) TOP N MOST POPULATED CITIES IN A COUNTRY (NEW)
     // =========================================================
     @Override

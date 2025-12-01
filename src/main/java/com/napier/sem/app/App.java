@@ -67,6 +67,12 @@ public class App {
 
         regionView.displayRegionPopulationCityVsNonCity(regionController.getRegionCityVsNonCityPopulation());
 
+        // ===== TOTAL POPULATION OF A DISTRICT =====
+        showTotalPopulationOfDistrict districtPopView = new showTotalPopulationOfDistrict();
+        String districtName = "Rio de Janeiro";   // the analyst's chosen district
+        long totalPopulation = cityController.getTotalPopulationOfDistrict(districtName);
+        districtPopView.displayTotalPopulation(districtName, totalPopulation);   // e.g. "Total Population of Rio de Janeiro: 1234567"
+
 
         db.disconnect(con);
     }

@@ -17,6 +17,8 @@ public class CityController {
 
     public List<City> getTopNMostPopulatedCitiesInWorld(int n) {return cityRepo.getTopNMostPopulatedCitiesInWorld(n);}
 
+    public long getTotalPopulationOfDistrict(String districtName) {return cityRepo.getTotalPopulationOfDistrict(districtName);
+    }
     public List<City> getCitiesInContinentByPopulation(String continentName) {return cityRepo.getCitiesInContinentByPopulation(continentName);}
 
     public List<City> getTopNCitiesInCountryByPopulation(String countryName, int n) {return cityRepo.getTopNCitiesInCountryByPopulation(countryName, n);}
