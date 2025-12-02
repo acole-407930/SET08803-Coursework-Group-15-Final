@@ -95,8 +95,7 @@ The project deliverables are as follows:
 | 3 | All the countries in a region organised by largest population to smallest. | Yes | |
 | 4 | The top N populated countries in the world where N is provided by the user. | Yes | |
 | 5 | The top N populated countries in a continent where N is provided by the user. | Yes | |
-| 6 | The top N populated countries in a region where N is provided by the user. | Yes | <img width="849" height="584" alt="image" src="https://github.com/user-attachments/assets/8a2cd6ae-33b8-44df-b244-550c90774773" />
- |
+| 6 | The top N populated countries in a region where N is provided by the user. | Yes | <img width="849" height="584" alt="image" src="https://github.com/user-attachments/assets/8a2cd6ae-33b8-44df-b244-550c90774773" />|
 | **2. City Reports** | | | |
 | 7 | All the cities in the world organised by largest population to smallest. | No | |
 | 8 | All the cities in a continent organised by largest population to smallest. | Yes | |
