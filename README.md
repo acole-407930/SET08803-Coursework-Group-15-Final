@@ -83,7 +83,7 @@ The project deliverables are as follows:
 # Implementation Status Report
 
 ## Summary
-**20 requirements of 32 have been implemented, which is 62.5%**
+**22 requirements of 32 have been implemented, which is 68.75%**
 
 ## Complete Requirements Table
 
@@ -122,9 +122,9 @@ The project deliverables are as follows:
 | 26 | The population of the world. | No | |
 | 27 | The population of a continent. | No | |
 | 28 | The population of a region. | No | |
-| 29 | The population of a country. | No | |
+| 29 | The population of a country. | Yes | |
 | 30 | The population of a district. | No | |
-| 31 | The population of a city. | No | |
+| 31 | The population of a city. | Yes | |
 | **6. Language Reports** | | | |
 | 32 | The number of people who speak Chinese, English, Hindi, Spanish, Arabic from greatest to smallest, including percentage of world population. | No | |
 
