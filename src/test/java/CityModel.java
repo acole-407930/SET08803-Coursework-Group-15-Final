@@ -1,12 +1,12 @@
-import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
 import com.napier.sem.model.City;
 
-class CityModel {
+import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
+
+class CityModelTest {
 
     @Test
     void testCityProperties() {
-
         City city = new City(1000, "Mumbai", "NM", "India", "Maharashtra", 10500000);
 
         assertEquals(1000, city.getId());
