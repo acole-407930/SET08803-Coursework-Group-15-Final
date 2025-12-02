@@ -90,23 +90,23 @@ The project deliverables are as follows:
 | ID | Requirement Name | Status | Screenshot |
 |----|------------------|--------|------------|
 | **1. Country Reports** | | | |
-| 1 | All the countries in the world organised by largest population to smallest. | Yes | |
-| 2 | All the countries in a continent organised by largest population to smallest. | Yes | |
-| 3 | All the countries in a region organised by largest population to smallest. | Yes | |
-| 4 | The top N populated countries in the world where N is provided by the user. | Yes | |
-| 5 | The top N populated countries in a continent where N is provided by the user. | Yes | |
-| 6 | The top N populated countries in a region where N is provided by the user. | Yes | <img width="849" height="584" alt="image" src="https://github.com/user-attachments/assets/8a2cd6ae-33b8-44df-b244-550c90774773" />|
+| 1 | All the countries in the world organised by largest population to smallest. | Yes |<img width="1162" height="778" alt="image" src="https://github.com/user-attachments/assets/4b62d160-2707-42d3-a5a2-246443656705" />|
+| 2 | All the countries in a continent organised by largest population to smallest. | Yes |<img width="1014" height="644" alt="image" src="https://github.com/user-attachments/assets/3eaf2387-07b6-46f2-a788-b49c0ca03bd5" />|
+| 3 | All the countries in a region organised by largest population to smallest. | Yes |<img width="849" height="405" alt="image" src="https://github.com/user-attachments/assets/ac7af51f-8906-4c38-bdd4-54638f487fc3" /> |
+| 4 | The top N populated countries in the world where N is provided by the user. | Yes |<img width="930" height="488" alt="image" src="https://github.com/user-attachments/assets/69a0ca2f-f291-4c99-a0de-4131cf7bbe60" />|
+| 5 | The top N populated countries in a continent where N is provided by the user. | Yes |<img width="825" height="270" alt="image" src="https://github.com/user-attachments/assets/dc4669ae-7256-4416-9abd-79460b87ceab" />|
+| 6 | The top N populated countries in a region where N is provided by the user. | Yes |<img width="685" height="472" alt="image" src="https://github.com/user-attachments/assets/763c44a1-8c68-4cd4-af62-5601caf527b3" />|
 | **2. City Reports** | | | |
 | 7 | All the cities in the world organised by largest population to smallest. | No | |
-| 8 | All the cities in a continent organised by largest population to smallest. | Yes | |
+| 8 | All the cities in a continent organised by largest population to smallest. | Yes |<img width="1497" height="844" alt="image" src="https://github.com/user-attachments/assets/923a2284-a60d-421c-9ab8-56c94c2d3362" />|
 | 9 | All the cities in a region organised by largest population to smallest. | No | |
-| 10 | All the cities in a country organised by largest population to smallest. | Yes | |
-| 11 | All the cities in a district organised by largest population to smallest. | Yes | |
+| 10 | All the cities in a country organised by largest population to smallest. | Yes |<img width="1004" height="665" alt="image" src="https://github.com/user-attachments/assets/3a416346-2dfe-43dd-93a0-5e12ad160cde" /> |
+| 11 | All the cities in a district organised by largest population to smallest. | Yes | <img width="672" height="547" alt="image" src="https://github.com/user-attachments/assets/ec5bf9fd-d9c1-4004-a9c7-dbee9ad14f17" />|
 | 12 | The top N populated cities in the world where N is provided by the user. | Yes | |
 | 13 | The top N populated cities in a continent where N is provided by the user. | Yes | |
-| 14 | The top N populated cities in a region where N is provided by the user. | Yes | |
+| 14 | The top N populated cities in a region where N is provided by the user. | Yes |<img width="696" height="124" alt="image" src="https://github.com/user-attachments/assets/8b916071-1795-4eb8-9066-ea49b1b255da" />|
 | 15 | The top N populated cities in a country where N is provided by the user. | Yes | |
-| 16 | The top N populated cities in a district where N is provided by the user. | Yes | |
+| 16 | The top N populated cities in a district where N is provided by the user. | Yes |<img width="505" height="174" alt="image" src="https://github.com/user-attachments/assets/9e41818e-91a8-429b-9299-b322f0626849" /> |
 | **3. Capital City Reports** | | | |
 | 17 | All the capital cities in the world organised by largest population to smallest. | No | |
 | 18 | All the capital cities in a continent organised by largest population to smallest. | No | |
