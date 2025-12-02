@@ -128,20 +128,6 @@ The project deliverables are as follows:
 | **6. Language Reports** | | | |
 | 32 | The number of people who speak Chinese, English, Hindi, Spanish, Arabic from greatest to smallest, including percentage of world population. | No | |
 
-## Statistics
-- **Total Requirements:** 32
-- **Implemented:** 20
-- **Not Implemented:** 12
-- **Completion Rate:** 62.5%
-
-## Category Completion
-- **Country Reports:** 6/6 (100%)
-- **City Reports:** 9/10 (90%)
-- **Capital City Reports:** 0/6 (0%)
-- **Population Reports:** 2/3 (66.7%)
-- **Specific Population Reports:** 0/6 (0%)
-- **Language Reports:** 0/1 (0%)
-
 --- 
 
 * Master Build ![Master Build](https://img.shields.io/github/actions/workflow/status/acole-407930/SET08803-Coursework-Group-15-Final/main.yml?branch=master&label=Master%20Build)
